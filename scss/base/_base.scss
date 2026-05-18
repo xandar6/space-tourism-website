@@ -8,10 +8,10 @@ body {
 
 a {
   color: inherit;
-}
 
-a:hover {
-  color: var(--color-accent-hover);
+  &:hover {
+    color: var(--color-accent-hover);
+  }
 }
 
 button,

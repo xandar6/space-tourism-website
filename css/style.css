@@ -1,7 +1,201 @@
-@import url("./reset.css");
-@import url("./variables.css");
-@import url("./base.css");
-@import url("./layout.css");
-@import url("./utilities.css");
+*,
+*::before,
+*::after {
+  box-sizing: border-box;
+}
 
+* {
+  margin: 0;
+}
+
+html {
+  color-scheme: light;
+}
+
+body {
+  min-height: 100dvh;
+}
+
+img,
+picture,
+svg,
+canvas {
+  display: block;
+  max-width: 100%;
+}
+
+img {
+  height: auto;
+}
+
+input,
+button,
+textarea,
+select {
+  font: inherit;
+}
+
+button {
+  border: 0;
+}
+
+p,
+h1,
+h2,
+h3,
+h4,
+h5,
+h6 {
+  overflow-wrap: break-word;
+}
+
+ul,
+ol {
+  padding: 0;
+}
+
+:root {
+  /* Colors */
+  --color-white: hsl(0, 0%, 100%);
+  --color-black: hsl(0, 0%, 0%);
+  --color-surface: hsl(0, 0%, 100%);
+  --color-text: hsl(220, 15%, 15%);
+  --color-text-muted: hsl(220, 10%, 40%);
+  --color-accent: hsl(220, 90%, 56%);
+  --color-accent-hover: hsl(220, 90%, 46%);
+  --color-focus: hsl(35, 95%, 55%);
+  /* Fonts */
+  --font-family-base: system-ui, -apple-system, BlinkMacSystemFont, "Segoe UI",
+    sans-serif;
+  --font-size-base: 1rem;
+  --line-height-base: 1.5;
+  /* Spacing scale */
+  --space-1: 0.25rem;
+  --space-2: 0.5rem;
+  --space-3: 0.75rem;
+  --space-4: 1rem;
+  --space-5: 1.5rem;
+  --space-6: 2rem;
+  --space-7: 3rem;
+  --space-8: 4rem;
+  /* Layout */
+  --container-max: 69.375rem;
+  --container-padding: 1rem;
+  --section-padding: clamp(2rem, 6vw, 5rem);
+  /* Decorative */
+  --radius-sm: 0.25rem;
+  --radius-md: 0.5rem;
+  --radius-lg: 1rem;
+  --shadow-sm: 0 0.25rem 0.75rem hsl(0 0% 0% / 0.08);
+}
+
+body {
+  font-family: var(--font-family-base);
+  font-size: var(--font-size-base);
+  line-height: var(--line-height-base);
+  background-color: var(--color-surface);
+  color: var(--color-text);
+}
+
+a {
+  color: inherit;
+}
+a:hover {
+  color: var(--color-accent-hover);
+}
+
+button,
+a {
+  -webkit-tap-highlight-color: transparent;
+}
+
+button {
+  cursor: pointer;
+  background-color: transparent;
+  color: inherit;
+}
+
+:focus-visible {
+  outline: 3px solid var(--color-focus);
+  outline-offset: 4px;
+}
+
+::selection {
+  background-color: var(--color-accent);
+  color: var(--color-white);
+}
+
+.container {
+  width: min(100% - var(--container-padding) * 2, var(--container-max));
+  margin-inline: auto;
+}
+
+.section {
+  padding-block: var(--section-padding);
+}
+
+.cluster {
+  display: flex;
+  flex-wrap: wrap;
+  gap: var(--cluster-gap, var(--space-4));
+  align-items: center;
+}
+
+.center {
+  display: grid;
+  place-items: center;
+}
+
+.button {
+  display: inline-flex;
+  align-items: center;
+  justify-content: center;
+  min-height: 2.75rem;
+  padding-inline: var(--space-5);
+  border-radius: var(--radius-sm);
+  background-color: var(--color-accent);
+  color: var(--color-white);
+  font-weight: 700;
+  line-height: 1;
+  text-decoration: none;
+}
+.button:hover, .button:focus-visible {
+  background-color: var(--color-accent-hover);
+  color: var(--color-white);
+}
+
+.sr-only {
+  position: absolute;
+  width: 1px;
+  height: 1px;
+  padding: 0;
+  margin: -1px;
+  overflow: hidden;
+  clip: rect(0, 0, 0, 0);
+  white-space: nowrap;
+  border: 0;
+}
+
+.flow > * + * {
+  margin-block-start: var(--flow-space, var(--space-4));
+}
+
+.text-center {
+  text-align: center;
+}
+
+.text-muted {
+  color: var(--color-text-muted);
+}
+
+@media (prefers-reduced-motion: reduce) {
+  *,
+  *::before,
+  *::after {
+    scroll-behavior: auto !important;
+    transition-duration: 0.01ms !important;
+    animation-duration: 0.01ms !important;
+    animation-iteration-count: 1 !important;
+  }
+}
 /* Project styles start here. */

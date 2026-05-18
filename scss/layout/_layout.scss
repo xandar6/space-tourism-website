@@ -31,10 +31,10 @@
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
-}
 
-.button:hover,
-.button:focus-visible {
-  background-color: var(--color-accent-hover);
-  color: var(--color-white);
+  &:hover,
+  &:focus-visible {
+    background-color: var(--color-accent-hover);
+    color: var(--color-white);
+  }
 }

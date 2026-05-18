@@ -1,15 +1,16 @@
-# Frontend Challenge Starter
+# Frontend Challenge Sass Starter
 
-A lightweight vanilla HTML, CSS, and JavaScript starter for Frontend Mentor challenges and small practice websites.
+A lightweight vanilla HTML, Sass, and JavaScript starter for Frontend Mentor challenges and small practice websites.
 
-The goal of this template is not to hide CSS behind a framework. It gives you a clean foundation so you can spend more time practicing layout, responsiveness, accessibility, and component styling.
+The goal of this template is not to hide CSS behind a framework. It gives you a clean Sass foundation so you can spend more time practicing layout, responsiveness, accessibility, and component styling.
 
 ## Table of Contents
 
 - [Overview](#overview)
 - [Folder Structure](#folder-structure)
 - [How to Use](#how-to-use)
-- [CSS Files](#css-files)
+- [Sass Scripts](#sass-scripts)
+- [Sass Files](#sass-files)
 - [Starter Patterns](#starter-patterns)
 - [Customization Checklist](#customization-checklist)
 - [Author](#author)
@@ -19,12 +20,14 @@ The goal of this template is not to hide CSS behind a framework. It gives you a 
 This starter includes:
 
 - Modern CSS reset
+- Sass partials organized by base styles, layout helpers, and utilities
 - CSS custom properties for colors, fonts, spacing, sizing, radius, and shadows
 - Base typography and element defaults
 - A reusable container system
 - A few small utility classes
 - Accessible focus styles
 - A tiny JavaScript entry file
+- npm scripts for compiling and watching Sass
 - A README structure you can adapt for each challenge
 
 ## Folder Structure
@@ -32,15 +35,21 @@ This starter includes:
 ```txt
 frontend-challenge-starter/
   index.html
+  package.json
   README.md
   .gitignore
   css/
-    reset.css
-    variables.css
-    base.css
-    layout.css
-    utilities.css
     style.css
+  scss/
+    style.scss
+    base/
+      _reset.scss
+      _variables.scss
+      _base.scss
+    layout/
+      _layout.scss
+    utilities/
+      _utilities.scss
   js/
     script.js
 ```
@@ -49,40 +58,60 @@ frontend-challenge-starter/
 
 1. Copy this folder when starting a new challenge.
 2. Rename the copied folder to match the project.
-3. Replace the starter HTML in `index.html`.
-4. Update the design tokens in `css/variables.css`.
-5. Add challenge-specific styles in `css/style.css`.
-6. Add JavaScript only when the challenge needs interactivity.
+3. Make sure Node.js is installed, then run `npm install`.
+4. Start Sass watch mode with `npm run sass:watch`.
+5. Replace the starter HTML in `index.html`.
+6. Update the design tokens in `scss/base/_variables.scss`.
+7. Add challenge-specific styles in `scss/style.scss` or a new partial.
+8. Add JavaScript only when the challenge needs interactivity.
 
 If you turn this into a GitHub template repository, you can start new projects from GitHub by clicking **Use this template**.
 
-## CSS Files
+## Sass Scripts
 
-### `reset.css`
+### `npm run sass`
+
+Compiles `scss/style.scss` to `css/style.css` once.
+
+### `npm run sass:watch`
+
+Watches your Sass files and recompiles whenever you save a change.
+
+### `npm run sass:build`
+
+Compiles a compressed production version of `css/style.css`.
+
+## Sass Files
+
+### `scss/style.scss`
+
+Loads the foundation partials and gives you a place for project-specific Sass.
+
+### `scss/base/_reset.scss`
 
 Removes common browser defaults and makes sizing more predictable.
 
-### `variables.css`
+### `scss/base/_variables.scss`
 
 Stores design tokens such as colors, font families, spacing, container sizes, border radius, and shadows.
 
 This is usually the first file to edit for each new challenge.
 
-### `base.css`
+### `scss/base/_base.scss`
 
 Sets global page styles like body font, default link behavior, image behavior, buttons, and focus states.
 
-### `layout.css`
+### `scss/layout/_layout.scss`
 
 Contains reusable layout patterns like `.container`, `.section`, and `.cluster`.
 
-### `utilities.css`
+### `scss/utilities/_utilities.scss`
 
 Contains small single-purpose helper classes like `.sr-only`, `.flow`, and text alignment helpers.
 
-### `style.css`
+### `css/style.css`
 
-Imports the foundation files and gives you a place for project-specific CSS.
+The compiled stylesheet used by `index.html`. Edit the Sass files, then let Sass update this file.
 
 ## Starter Patterns
 
@@ -105,7 +134,7 @@ This keeps content centered, gives small screens side breathing room, and stops 
 }
 ```
 
-The value comes from `variables.css`:
+The value comes from `scss/base/_variables.scss`:
 
 ```css
 --section-padding: clamp(2rem, 6vw, 5rem);
@@ -134,7 +163,7 @@ This adds consistent vertical spacing between direct children. You can customize
 Before building a new challenge, update:
 
 - Page title in `index.html`
-- Colors in `css/variables.css`
+- Colors in `scss/base/_variables.scss`
 - Font family and font weights
 - Container max width
 - Main spacing scale if the design uses different spacing
