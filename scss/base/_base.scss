@@ -8,6 +8,7 @@ body {
 
 a {
   color: inherit;
+  transition: color 200ms ease;
 
   &:hover {
     color: var(--color-accent-hover);
