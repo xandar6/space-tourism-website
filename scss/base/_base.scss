@@ -1,9 +1,8 @@
 body {
-  font-family: var(--font-family-base);
-  font-size: var(--font-size-base);
-  line-height: var(--line-height-base);
-  background-color: var(--color-surface);
-  color: var(--color-text);
+  font-family: var(--ff-barlow);
+  font-size: var(--fs-300);
+  background-color: hsl(var(--clr-blue-900));
+  color: hsl(var(--clr-white));
 }
 
 a {
@@ -20,6 +19,10 @@ a {
   -webkit-tap-highlight-color: transparent;
 }
 
+section {
+  margin-top: var(--sp-1200);
+}
+
 button {
   cursor: pointer;
   background-color: transparent;
@@ -33,5 +36,15 @@ button {
 
 ::selection {
   background-color: var(--color-accent);
-  color: var(--color-white);
+  color: var(--clr-white);
+}
+
+h1,
+h2,
+h3,
+h4,
+h5,
+h6,
+p {
+  font-weight: 400;
 }

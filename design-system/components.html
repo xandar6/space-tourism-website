@@ -1,0 +1,303 @@
+<!doctype html>
+<html lang="en">
+   <head>
+      <meta charset="UTF-8" />
+      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+
+      <title>Components | Space Tourism</title>
+
+      <link rel="stylesheet" href="../css/style.css" />
+   </head>
+
+   <body>
+      <div class="container">
+         <header class="design-system-header flex">
+            <a href="../index.html" aria-label="Space tourism home">
+               <img src="../assets/shared/logo.svg" alt="" />
+            </a>
+            <h1 class="uppercase letter-spacing-1 ff-barlow-cond">
+               components
+            </h1>
+         </header>
+         <nav
+            class="design-system-nav flex flex-column fs-200 text-purple"
+            aria-label="Design system"
+         >
+            <a href="index.html">Style guide</a>
+            <a href="components.html" aria-current="page">Components</a>
+         </nav>
+
+         <main>
+            <section
+               id="single-components"
+               class="flow"
+               style="--flow-space: var(--sp-1200)"
+            >
+               <h2 class="title design-title uppercase letter-spacing-1">
+                  <span>01</span>single components
+               </h2>
+
+               <article class="navigation-states flex" style="--gap: 3rem">
+                  <div
+                     class="component-container"
+                     style="
+                        --component-title: &quot;Navigation States - Desktop & Tablet&quot;;
+                     "
+                  >
+                     <nav class="nav nav-desktop-tablet">
+                        <ul
+                           class="flex indicators horizontal-indicators"
+                           style="--gap: 3rem"
+                        >
+                           <li>
+                              <a href="#" class="nav-link title numbered-title"
+                                 ><span>00</span>Menu</a
+                              >
+                           </li>
+                           <li>
+                              <a
+                                 href="#"
+                                 class="nav-link title numbered-title hover"
+                                 ><span>00</span>Menu</a
+                              >
+                           </li>
+                           <li>
+                              <a
+                                 href="#"
+                                 class="nav-link title numbered-title"
+                                 aria-current="page"
+                                 ><span>00</span>Menu</a
+                              >
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+                  <div
+                     class="flex component-container"
+                     style="
+                        --component-title: &quot;Navigation States - Mobile&quot;;
+                     "
+                  >
+                     <nav class="nav nav-mobile fs-200">
+                        <ul
+                           class="flex flex-column indicators vertical-indicators"
+                           style="--gap: 2.4rem"
+                        >
+                           <li>
+                              <a href="#" class="nav-link title numbered-title"
+                                 ><span>00</span>Menu</a
+                              >
+                           </li>
+                           <li>
+                              <a
+                                 href="#"
+                                 class="nav-link title numbered-title hover"
+                                 ><span>00</span>Menu</a
+                              >
+                           </li>
+                           <li>
+                              <a
+                                 href="#"
+                                 class="nav-link title numbered-title"
+                                 aria-current="page"
+                                 ><span>00</span>Menu</a
+                              >
+                           </li>
+                        </ul>
+                     </nav>
+                  </div>
+               </article>
+               <article>
+                  <div
+                     class="component-container"
+                     style="--component-title: &quot;Tabs Menu&quot;"
+                  >
+                     <div
+                        role="tablist"
+                        class="flex indicators horizontal-indicators fs-200"
+                        style="
+                           justify-content: center;
+                           --gap: 3rem;
+                           --indicator-gap: -1rem;
+                           margin-block-end: calc(var(--indicator-gap) * -1);
+                        "
+                     >
+                        <button class="title" type="button" role="tab">
+                           tabs menu
+                        </button>
+                        <button class="title hover" type="button" role="tab">
+                           tabs menu
+                        </button>
+                        <button
+                           class="title"
+                           type="button"
+                           role="tab"
+                           aria-selected="true"
+                        >
+                           tabs menu
+                        </button>
+                     </div>
+                  </div>
+               </article>
+               <article>
+                  <div
+                     class="component-container"
+                     style="
+                        --component-title: &quot;Display Button states - desktop & tablet&quot;;
+                     "
+                  >
+                     <button
+                        class="rounded-button bg-white text-primary ff-bellefair fs-700 uppercase"
+                        style="--button-width: 272px; --scale-size: 1.5"
+                     >
+                        explore
+                     </button>
+                     <div
+                        style="
+                           width: 408px;
+                           aspect-ratio: 1;
+                           display: grid;
+                           place-items: center;
+                        "
+                     >
+                        <button
+                           class="rounded-button bg-white text-primary ff-bellefair fs-700 uppercase hover"
+                           style="--button-width: 272px; --scale-size: 1.5"
+                        >
+                           explore
+                        </button>
+                     </div>
+                  </div>
+               </article>
+               <article>
+                  <div
+                     class="component-container"
+                     style="
+                        --component-title: &quot;Display Button states - mobile&quot;;
+                     "
+                  >
+                     <button
+                        class="rounded-button bg-white text-primary ff-bellefair fs-300 uppercase"
+                        style="--button-width: 144px; --scale-size: 2"
+                     >
+                        explore
+                     </button>
+                     <div
+                        style="
+                           width: 288px;
+                           aspect-ratio: 1;
+                           display: grid;
+                           place-items: center;
+                        "
+                     >
+                        <button
+                           class="rounded-button bg-white text-primary ff-bellefair fs-300 uppercase hover"
+                           style="--button-width: 144px; --scale-size: 2"
+                        >
+                           explore
+                        </button>
+                     </div>
+                  </div>
+               </article>
+               <article class="flex">
+                  <div
+                     class="component-container"
+                     style="
+                        --component-title: &quot;small pagination - desktop&quot;;
+                     "
+                  >
+                     <div
+                        class="flex dot-paginations"
+                        style="justify-content: center; --gap: 3rem"
+                     >
+                        <button type="button">
+                           <span class="sr-only">slide title</span>
+                        </button>
+                        <button type="button" class="hover">
+                           <span class="sr-only">slide title</span>
+                        </button>
+                        <button type="button" aria-current="true">
+                           <span class="sr-only">slide title</span>
+                        </button>
+                     </div>
+                  </div>
+                  <div
+                     class="component-container"
+                     style="
+                        --component-title: &quot;small pagination - mobile&quot;;
+                     "
+                  >
+                     <div
+                        class="flex dot-paginations"
+                        style="
+                           justify-content: center;
+                           --gap: 3rem;
+                           --dot-paginations-width: 10px;
+                        "
+                     >
+                        <button type="button">
+                           <span class="sr-only">slide title</span>
+                        </button>
+                        <button type="button" class="hover">
+                           <span class="sr-only">slide title</span>
+                        </button>
+                        <button type="button" aria-current="true">
+                           <span class="sr-only">slide title</span>
+                        </button>
+                     </div>
+                  </div>
+               </article>
+               <article class="flex">
+                  <div
+                     class="component-container"
+                     style="
+                        --component-title: &quot;large pagination - desktop&quot;;
+                     "
+                  >
+                     <div
+                        class="flex numbered-paginations ff-bellefair fs-700"
+                        style="justify-content: center; --gap: 3rem"
+                     >
+                        <button type="button">
+                           <span class="sr-only">slide title</span>0
+                        </button>
+                        <button type="button" class="hover">
+                           <span class="sr-only">slide title</span>0
+                        </button>
+                        <button type="button" aria-current="true">
+                           <span class="sr-only">slide title</span>0
+                        </button>
+                     </div>
+                  </div>
+                  <div
+                     class="component-container"
+                     style="
+                        --component-title: &quot;small pagination - mobile&quot;;
+                     "
+                  >
+                     <div
+                        class="flex numbered-paginations ff-bellefair fs-500"
+                        style="
+                           justify-content: center;
+                           --gap: 3rem;
+                           --numbered-paginations-width: 56px;
+                        "
+                     >
+                        <button type="button">
+                           <span class="sr-only">slide title</span>0
+                        </button>
+                        <button type="button" class="hover">
+                           <span class="sr-only">slide title</span>0
+                        </button>
+                        <button type="button" aria-current="true">
+                           <span class="sr-only">slide title</span>0
+                        </button>
+                     </div>
+                  </div>
+               </article>
+            </section>
+         </main>
+      </div>
+      <footer></footer>
+   </body>
+</html>

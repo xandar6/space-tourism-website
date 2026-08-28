@@ -27,7 +27,7 @@
   padding-inline: var(--space-5);
   border-radius: var(--radius-sm);
   background-color: var(--color-accent);
-  color: var(--color-white);
+  color: var(--clr-white);
   font-weight: 700;
   line-height: 1;
   text-decoration: none;
@@ -35,6 +35,6 @@
   &:hover,
   &:focus-visible {
     background-color: var(--color-accent-hover);
-    color: var(--color-white);
+    color: var(--clr-white);
   }
 }
