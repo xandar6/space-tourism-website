@@ -1,373 +1,251 @@
 <!doctype html>
 <html lang="en">
-   <head>
-      <meta charset="UTF-8" />
-      <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <meta
+      name="description"
+      content="Design tokens and typography for the Space Tourism website."
+    />
 
-      <title>Style Guide | Space Tourism</title>
+    <title>Style Guide | Space Tourism</title>
 
-      <link rel="stylesheet" href="../css/style.css" />
-   </head>
-   <body>
-      <div class="container">
-         <header class="design-system-header flex">
-            <a href="../index.html" aria-label="Space tourism home">
-               <img src="../assets/shared/logo.svg" alt="" />
-            </a>
-            <h1 class="uppercase letter-spacing-1 ff-barlow-cond">
-               style guide
-            </h1>
-         </header>
-         <nav
-            class="design-system-nav flex flex-column fs-200 text-purple"
-            aria-label="Design system"
-         >
-            <a href="index.html" aria-current="page">Style guide</a>
-            <a href="components.html">Components</a>
-         </nav>
+    <link rel="icon" href="../assets/favicon-32x32.png" />
+    <link rel="stylesheet" href="../css/design-system.css" />
+  </head>
 
-         <section class="colors uppercase">
-            <h2 class="title design-title"><span>01</span>colors</h2>
-            <div class="color-pallet flex">
-               <div class="color-code">
-                  <div class="color bg-primary ff-bellefair fs-500">
-                     #obod17
-                  </div>
-                  <div class="color-rgb-hsl">
-                     <p class="grid">
-                        <span class="text-accent">rGB </span>11, 13, 23
-                     </p>
-                     <p class="grid">
-                        <span class="text-accent">HSL </span>230&deg;, 35%, 7%
-                     </p>
-                  </div>
-               </div>
-               <div class="color-code">
-                  <div class="color bg-accent text-primary ff-bellefair fs-500">
-                     #D0D6F9
-                  </div>
-                  <div class="color-rgb-hsl">
-                     <p class="grid">
-                        <span class="text-accent">rGB </span>208, 214, 249
-                     </p>
-                     <p class="grid">
-                        <span class="text-accent">HSL </span>231&deg;, 77%, 90%
-                     </p>
-                  </div>
-               </div>
-               <div class="color-code">
-                  <div class="color bg-white text-primary ff-bellefair fs-500">
-                     #FFFFFF
-                  </div>
-                  <div class="color-rgb-hsl">
-                     <p class="grid">
-                        <span class="text-accent">rGB</span>255, 255, 255
-                     </p>
-                     <p class="grid">
-                        <span class="text-accent">HSL</span>0&deg;, 0%, 100%
-                     </p>
-                  </div>
-               </div>
+  <body>
+    <div class="container">
+      <header class="docs-header">
+        <a href="../index.html" aria-label="Space Tourism home">
+          <img src="../assets/shared/logo.svg" alt="" />
+        </a>
+        <h1>Style guide</h1>
+      </header>
+
+      <nav class="docs-nav" aria-label="Design system">
+        <a href="index.html" aria-current="page">Style guide</a>
+        <a href="components.html">Components</a>
+      </nav>
+
+      <main class="docs-main">
+        <section class="docs-section" aria-labelledby="colors-title">
+          <h2 class="docs-section-title" id="colors-title">
+            <span>01</span>Colors
+          </h2>
+
+          <div class="color-palette">
+            <article class="color-swatch">
+              <div class="color-swatch__sample bg-primary">#0B0D17</div>
+              <dl>
+                <div><dt>RGB</dt><dd>11, 13, 23</dd></div>
+                <div><dt>HSL</dt><dd>230°, 35%, 7%</dd></div>
+              </dl>
+            </article>
+
+            <article class="color-swatch">
+              <div class="color-swatch__sample bg-accent text-primary">
+                #D0D6F9
+              </div>
+              <dl>
+                <div><dt>RGB</dt><dd>208, 214, 249</dd></div>
+                <div><dt>HSL</dt><dd>231°, 77%, 90%</dd></div>
+              </dl>
+            </article>
+
+            <article class="color-swatch">
+              <div class="color-swatch__sample bg-white text-primary">
+                #FFFFFF
+              </div>
+              <dl>
+                <div><dt>RGB</dt><dd>255, 255, 255</dd></div>
+                <div><dt>HSL</dt><dd>0°, 0%, 100%</dd></div>
+              </dl>
+            </article>
+          </div>
+        </section>
+
+        <section class="docs-section" aria-labelledby="typography-title">
+          <h2 class="docs-section-title" id="typography-title">
+            <span>02</span>Typography
+          </h2>
+
+          <div class="typography-grid">
+            <div class="typography-column flow">
+              <article class="typography-preset">
+                <h3 class="typography-preset__name">
+                  Text Preset 1 — Bellefair Regular
+                </h3>
+                <p class="typography-preset__spec">
+                  144px · normal line height · 0px letter spacing
+                </p>
+                <p class="typography-preset__sample text-preset-1 uppercase">
+                  Earth
+                </p>
+              </article>
+
+              <article class="typography-preset">
+                <h3 class="typography-preset__name">
+                  Text Preset 2 — Bellefair Regular
+                </h3>
+                <p class="typography-preset__spec">
+                  100px · normal line height · 0px letter spacing
+                </p>
+                <p class="typography-preset__sample text-preset-2 uppercase">
+                  Venus
+                </p>
+              </article>
+
+              <article class="typography-preset">
+                <h3 class="typography-preset__name">
+                  Text Preset 3 — Bellefair Regular
+                </h3>
+                <p class="typography-preset__spec">
+                  56px · normal line height · 0px letter spacing
+                </p>
+                <p class="typography-preset__sample text-preset-3 uppercase">
+                  Jupiter & Saturn
+                </p>
+              </article>
+
+              <article class="typography-preset">
+                <h3 class="typography-preset__name">
+                  Text Preset 4 — Bellefair Regular
+                </h3>
+                <p class="typography-preset__spec">
+                  32px · normal line height · 0px letter spacing
+                </p>
+                <p class="typography-preset__sample text-preset-4 uppercase">
+                  Uranus, Neptune, & Pluto
+                </p>
+              </article>
+
+              <article class="typography-preset">
+                <h3 class="typography-preset__name">
+                  Text Preset 5 — Barlow Condensed Regular
+                </h3>
+                <p class="typography-preset__spec">
+                  20px · 33.6px line height · 4px letter spacing
+                </p>
+                <p class="typography-preset__sample text-preset-5">
+                  Haumea, Sedna, Eris, & Ceres
+                </p>
+              </article>
             </div>
-         </section>
 
-         <section class="typography capitalized">
-            <h2 class="title design-title"><span>02</span>typography</h2>
-            <div class="typography-columns flex">
-               <div class="typography-column flow">
-                  <div class="typography-preset">
-                     <p class="preset-title text-accent fw-700">
-                        Text Preset 1 - Bellefair Regular
-                     </p>
-                     <p class="preset-units text-accent">
-                        144px - 171.9px Line Height (Normal) - 0px Letter
-                        Spacing
-                     </p>
-                     <p class="preset-text uppercase ff-bellefair fs-1100">
-                        earth
-                     </p>
-                  </div>
+            <div class="typography-column flow">
+              <article class="typography-preset">
+                <h3 class="typography-preset__name">
+                  Text Preset 6 — Bellefair Regular
+                </h3>
+                <p class="typography-preset__spec">
+                  28px · normal line height · 0px letter spacing
+                </p>
+                <p class="typography-preset__sample text-preset-6 uppercase">
+                  384,400 km
+                </p>
+              </article>
 
-                  <div class="typography-preset">
-                     <p class="preset-title text-accent fw-700">
-                        Text Preset 2 - Bellefair Regular
-                     </p>
-                     <p class="preset-units text-accent">
-                        100px - 114.6px Line Height (Normal) - 0px Letter
-                        Spacing
-                     </p>
-                     <p class="preset-text uppercase ff-bellefair fs-1000">
-                        venus
-                     </p>
-                  </div>
+              <article class="typography-preset">
+                <h3 class="typography-preset__name">
+                  Text Preset 7 — Barlow Condensed Regular
+                </h3>
+                <p class="typography-preset__spec">
+                  14px · 16.8px line height · 2px letter spacing
+                </p>
+                <p class="typography-preset__sample text-preset-7">
+                  Avg. distance
+                </p>
+              </article>
 
-                  <div class="typography-preset">
-                     <p class="preset-title text-accent fw-700">
-                        Text Preset 3 - Bellefair Regular
-                     </p>
-                     <p class="preset-units text-accent">
-                        56px - 64.2px Line Height (Normal) - 0px Letter Spacing
-                     </p>
-                     <p class="preset-text uppercase ff-bellefair fs-800">
-                        jupiter & saturn
-                     </p>
-                  </div>
+              <article class="typography-preset">
+                <h3 class="typography-preset__name">
+                  Text Preset 8 — Barlow Condensed Regular
+                </h3>
+                <p class="typography-preset__spec">
+                  16px · 19.2px line height · 2px letter spacing
+                </p>
+                <p class="typography-preset__sample text-preset-8">Europa</p>
+              </article>
 
-                  <div class="typography-preset">
-                     <p class="preset-title text-accent fw-700">
-                        Text Preset 4 - Bellefair Regular
-                     </p>
-                     <p class="preset-units text-accent">
-                        32px - 36.7px Line Height (Normal) - 0px Letter Spacing
-                     </p>
-                     <p class="preset-text uppercase ff-bellefair fs-700">
-                        URANUS, NEPTUNE, & PLUTO
-                     </p>
-                  </div>
-
-                  <div class="typography-preset">
-                     <p class="preset-title text-accent fw-700">
-                        Text Preset 5 - Barlow Condensed Regular
-                     </p>
-                     <p class="preset-units text-accent">
-                        20px - 33.6px Line Height (Normal) - 4px Letter Spacing
-                     </p>
-                     <p
-                        class="preset-text uppercase ff-barlow-cond fs-400 letter-spacing-1"
-                     >
-                        HAUMEA, SEDNA, ERIS, & CERES
-                     </p>
-                  </div>
-               </div>
-               <div class="typography-column flow">
-                  <div class="typography-preset">
-                     <p class="preset-title text-accent fw-700">
-                        Text Preset 6 - Bellefair Regular
-                     </p>
-                     <p class="preset-units text-accent">
-                        28px - 32.1px Line Height (Normal) - 0px Letter Spacing
-                     </p>
-                     <p class="preset-text uppercase ff-bellefair fs-600">
-                        384,400 km
-                     </p>
-                  </div>
-                  <div class="typography-preset">
-                     <p class="preset-title text-accent fw-700">
-                        Text Preset 7 - Barlow Condensed Regular
-                     </p>
-                     <p class="preset-units text-accent">
-                        14px - 16.8px Line Height (Normal) - 2px Letter Spacing
-                     </p>
-                     <p
-                        class="preset-text uppercase ff-barlow-cond fs-100 letter-spacing-2"
-                     >
-                        AVG. DISTANCE
-                     </p>
-                  </div>
-                  <div class="typography-preset">
-                     <p class="preset-title text-accent fw-700">
-                        Text Preset 8 - Barlow Condensed Regular
-                     </p>
-                     <p class="preset-units text-accent">
-                        16px - 19.2px Line Height (Normal) - 2px Letter Spacing
-                     </p>
-                     <p
-                        class="preset-text uppercase ff-barlow-cond fs-200 letter-spacing-2"
-                     >
-                        EUROPA
-                     </p>
-                  </div>
-                  <div class="typography-preset">
-                     <p class="preset-title text-accent fw-700">
-                        Text Preset 9 - Barlow Regular
-                     </p>
-                     <p class="preset-units text-accent">
-                        18px - 180% Line Height - 0px Letter Spacing
-                     </p>
-                     <p class="preset-text ff-barlow fs-300 line-height-180">
-                        Lorem ipsum dolor sit amet, consectetuer adipiscing
-                        elit. Phasellus hendrerit. Pellentesque aliquet nibh nec
-                        urna. In nisi neque, aliquet vel, dapibus id, mattis
-                        vel, nisi. Sed pretium, ligula sollicitudin laoreet
-                        viverra, tortor libero sodales leo, eget blandit nunc
-                        tortor eu nibh. Nullam mollis. Ut justo. Suspendisse
-                        potenti.Lorem ipsum dolor sit amet, consectetuer
-                        adipiscing elit. Phasellus hendrerit. Pellentesque
-                        aliquet nibh nec urna. In nisi neque, aliquet vel,
-                        dapibus id, mattis vel, nisi. Sed pretium, ligula
-                        sollicitudin laoreet viverra, tortor libero sodales leo,
-                        eget blandit nunc tortor eu nibh. Nullam mollis. Ut
-                        justo. Suspendisse potenti.Lorem ipsum dolor sit amet,
-                        consectetuer adipiscing elit. Phasellus hendrerit.
-                        Pellentesque aliquet nibh nec urna. In nisi neque,
-                        aliquet vel, dapibus id, mattis vel, nisi.
-                     </p>
-                  </div>
-               </div>
+              <article class="typography-preset">
+                <h3 class="typography-preset__name">
+                  Text Preset 9 — Barlow Regular
+                </h3>
+                <p class="typography-preset__spec">
+                  18px · 180% line height · 0px letter spacing
+                </p>
+                <p class="typography-preset__sample text-preset-9">
+                  Space travel changes our perspective. From a distance, Earth
+                  becomes a small world without visible borders, surrounded by
+                  the vastness of space.
+                </p>
+              </article>
             </div>
-         </section>
+          </div>
+        </section>
 
-         <section class="spacing">
-            <h2 class="title design-title"><span>02</span>spacing</h2>
-            <div class="spacing-scale flex flex-wrap" style="--gap: 4rem">
-               <div class="spacing flex flex-column">
-                  <p class="size-unit text-accent">
-                     <span class="fw-700" style="margin-inline-end: 1rem"
-                        >1600 </span
-                     >128px
-                  </p>
-                  <div
-                     class="size-visual bg-accent"
-                     style="width: 128px; height: 42px"
-                  ></div>
-               </div>
+        <section class="docs-section" aria-labelledby="spacing-title">
+          <h2 class="docs-section-title" id="spacing-title">
+            <span>03</span>Spacing
+          </h2>
 
-               <div class="spacing flex flex-column">
-                  <p class="size-unit text-accent">
-                     <span class="fw-700" style="margin-inline-end: 1rem"
-                        >1200 </span
-                     >96px
-                  </p>
-                  <div
-                     class="size-visual bg-accent"
-                     style="width: 96px; height: 42px"
-                  ></div>
-               </div>
-
-               <div class="spacing flex flex-column">
-                  <p class="size-unit text-accent">
-                     <span class="fw-700" style="margin-inline-end: 1rem"
-                        >1000 </span
-                     >80px
-                  </p>
-                  <div
-                     class="size-visual bg-accent"
-                     style="width: 80px; height: 42px"
-                  ></div>
-               </div>
-
-               <div class="spacing flex flex-column">
-                  <p class="size-unit text-accent">
-                     <span class="fw-700" style="margin-inline-end: 1rem"
-                        >800 </span
-                     >64px
-                  </p>
-                  <div
-                     class="size-visual bg-accent"
-                     style="width: 64px; height: 42px"
-                  ></div>
-               </div>
-
-               <div class="spacing flex flex-column">
-                  <p class="size-unit text-accent">
-                     <span class="fw-700" style="margin-inline-end: 1rem"
-                        >600 </span
-                     >48px
-                  </p>
-                  <div
-                     class="size-visual bg-accent"
-                     style="width: 48px; height: 42px"
-                  ></div>
-               </div>
-
-               <div class="spacing flex flex-column">
-                  <p class="size-unit text-accent">
-                     <span class="fw-700" style="margin-inline-end: 1rem"
-                        >500 </span
-                     >40px
-                  </p>
-                  <div
-                     class="size-visual bg-accent"
-                     style="width: 40px; height: 42px"
-                  ></div>
-               </div>
-
-               <div class="spacing flex flex-column">
-                  <p class="size-unit text-accent">
-                     <span class="fw-700" style="margin-inline-end: 1rem"
-                        >400 </span
-                     >32px
-                  </p>
-                  <div
-                     class="size-visual bg-accent"
-                     style="width: 32px; height: 42px"
-                  ></div>
-               </div>
-
-               <div class="spacing flex flex-column">
-                  <p class="size-unit text-accent">
-                     <span class="fw-700" style="margin-inline-end: 1rem"
-                        >300 </span
-                     >24px
-                  </p>
-                  <div
-                     class="size-visual bg-accent"
-                     style="width: 24px; height: 42px"
-                  ></div>
-               </div>
-
-               <div class="spacing flex flex-column">
-                  <p class="size-unit text-accent">
-                     <span class="fw-700" style="margin-inline-end: 1rem"
-                        >200 </span
-                     >16px
-                  </p>
-                  <div
-                     class="size-visual bg-accent"
-                     style="width: 16px; height: 42px"
-                  ></div>
-               </div>
-
-               <div class="spacing flex flex-column">
-                  <p class="size-unit text-accent">
-                     <span class="fw-700" style="margin-inline-end: 1rem"
-                        >150 </span
-                     >12px
-                  </p>
-                  <div
-                     class="size-visual bg-accent"
-                     style="width: 12px; height: 42px"
-                  ></div>
-               </div>
-
-               <div class="spacing flex flex-column">
-                  <p class="size-unit text-accent">
-                     <span class="fw-700" style="margin-inline-end: 1rem"
-                        >100 </span
-                     >8px
-                  </p>
-                  <div
-                     class="size-visual bg-accent"
-                     style="width: 8px; height: 42px"
-                  ></div>
-               </div>
-
-               <div class="spacing flex flex-column">
-                  <p class="size-unit text-accent">
-                     <span class="fw-700" style="margin-inline-end: 1rem"
-                        >50 </span
-                     >4px
-                  </p>
-                  <div
-                     class="size-visual bg-accent"
-                     style="width: 4px; height: 42px"
-                  ></div>
-               </div>
-
-               <div class="spacing flex flex-column">
-                  <p class="size-unit text-accent">
-                     <span class="fw-700" style="margin-inline-end: 1rem"
-                        >25 </span
-                     >2px
-                  </p>
-                  <div
-                     class="size-visual bg-accent"
-                     style="width: 2px; height: 42px"
-                  ></div>
-               </div>
-            </div>
-         </section>
-      </div>
-      <footer></footer>
-   </body>
+          <div class="spacing-scale">
+            <article class="spacing-sample" style="--space-size: var(--sp-1600)">
+              <p class="spacing-sample__label"><strong>1600</strong>128px</p>
+              <div class="spacing-sample__visual"></div>
+            </article>
+            <article class="spacing-sample" style="--space-size: var(--sp-1200)">
+              <p class="spacing-sample__label"><strong>1200</strong>96px</p>
+              <div class="spacing-sample__visual"></div>
+            </article>
+            <article class="spacing-sample" style="--space-size: var(--sp-1000)">
+              <p class="spacing-sample__label"><strong>1000</strong>80px</p>
+              <div class="spacing-sample__visual"></div>
+            </article>
+            <article class="spacing-sample" style="--space-size: var(--sp-800)">
+              <p class="spacing-sample__label"><strong>800</strong>64px</p>
+              <div class="spacing-sample__visual"></div>
+            </article>
+            <article class="spacing-sample" style="--space-size: var(--sp-600)">
+              <p class="spacing-sample__label"><strong>600</strong>48px</p>
+              <div class="spacing-sample__visual"></div>
+            </article>
+            <article class="spacing-sample" style="--space-size: var(--sp-500)">
+              <p class="spacing-sample__label"><strong>500</strong>40px</p>
+              <div class="spacing-sample__visual"></div>
+            </article>
+            <article class="spacing-sample" style="--space-size: var(--sp-400)">
+              <p class="spacing-sample__label"><strong>400</strong>32px</p>
+              <div class="spacing-sample__visual"></div>
+            </article>
+            <article class="spacing-sample" style="--space-size: var(--sp-300)">
+              <p class="spacing-sample__label"><strong>300</strong>24px</p>
+              <div class="spacing-sample__visual"></div>
+            </article>
+            <article class="spacing-sample" style="--space-size: var(--sp-200)">
+              <p class="spacing-sample__label"><strong>200</strong>16px</p>
+              <div class="spacing-sample__visual"></div>
+            </article>
+            <article class="spacing-sample" style="--space-size: var(--sp-150)">
+              <p class="spacing-sample__label"><strong>150</strong>12px</p>
+              <div class="spacing-sample__visual"></div>
+            </article>
+            <article class="spacing-sample" style="--space-size: var(--sp-100)">
+              <p class="spacing-sample__label"><strong>100</strong>8px</p>
+              <div class="spacing-sample__visual"></div>
+            </article>
+            <article class="spacing-sample" style="--space-size: var(--sp-50)">
+              <p class="spacing-sample__label"><strong>50</strong>4px</p>
+              <div class="spacing-sample__visual"></div>
+            </article>
+            <article class="spacing-sample" style="--space-size: var(--sp-25)">
+              <p class="spacing-sample__label"><strong>25</strong>2px</p>
+              <div class="spacing-sample__visual"></div>
+            </article>
+          </div>
+        </section>
+      </main>
+    </div>
+  </body>
 </html>

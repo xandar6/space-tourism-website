@@ -1,6 +1,4 @@
-@import url("https://fonts.googleapis.com/css2?family=Barlow+Condensed:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Barlow:ital,wght@0,100;0,200;0,300;0,400;0,500;0,600;0,700;0,800;0,900;1,100;1,200;1,300;1,400;1,500;1,600;1,700;1,800;1,900&display=swap");
-@import url("https://fonts.googleapis.com/css2?family=Bellefair&display=swap");
+@import url("https://fonts.googleapis.com/css2?family=Barlow:wght@400;700&family=Barlow+Condensed:wght@400;700&family=Bellefair&display=swap");
 
 :root {
   /* Font families */
@@ -8,12 +6,16 @@
   --ff-barlow-cond: "Barlow Condensed", sans-serif;
   --ff-bellefair: "Bellefair", serif;
 
-  /* Colors */
+  /* Primitive colors: HSL channels */
   --clr-blue-900: 230 35% 7%;
   --clr-blue-300: 231 77% 90%;
   --clr-white: 0 0% 100%;
-  --clr-purple: 266 100% 64%;
-  --clr-purple-light: 268 88% 81%;
+
+  /* Semantic colors */
+  --color-background: hsl(var(--clr-blue-900));
+  --color-text: hsl(var(--clr-white));
+  --color-text-muted: hsl(var(--clr-blue-300));
+  --color-focus: hsl(var(--clr-blue-300));
 
   /* Spacing */
   --sp-25: 0.125rem; // 2px
@@ -30,9 +32,9 @@
   --sp-1200: 6rem; // 96px
   --sp-1600: 8rem; // 128px
 
-  /* font-sizes */
-  --fs-1100: 9rem; // 144px
-  --fs-1000: 6.25rem; // 100px
+  /* Font sizes */
+  --fs-1100: clamp(5rem, 7rem + 3vw, 9rem); // 80px - 144px
+  --fs-1000: clamp(3.5rem, 4.5rem + 3vw, 6.25rem); // 56px - 100px
   --fs-900: 6rem; // 96px
   --fs-800: 3.5rem; // 56px
   --fs-700: 2rem; // 32px
@@ -43,10 +45,17 @@
   --fs-200: 1rem; // 16px
   --fs-100: 0.875rem; // 14px
 
-  /* Letter spacing */
-  --letter-spacing-1: 0.17em;
+  /* Typography */
+  --letter-spacing-wide: 0.17em;
+  --letter-spacing-medium: 0.125em;
+  --line-height-body: 1.8;
 
   /* Layout */
   --container-max: 69.375rem; // 1110px
-  --container-padding: 2rem; // 32px
+  --container-padding: clamp(1.5rem, 5vw, 2.5rem);
+  --section-spacing: clamp(4rem, 8vw, 6rem);
+
+  /* Motion */
+  --transition-fast: 200ms ease;
+  --transition-normal: 300ms ease;
 }

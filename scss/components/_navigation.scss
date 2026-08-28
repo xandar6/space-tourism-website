@@ -1,0 +1,87 @@
+.nav-list,
+.tab-list {
+  display: flex;
+  gap: var(--navigation-gap, clamp(var(--sp-300), 4vw, var(--sp-600)));
+  align-items: center;
+}
+
+.nav-list {
+  padding: 0;
+  list-style: none;
+}
+
+.nav-list--vertical {
+  flex-direction: column;
+  align-items: stretch;
+}
+
+.nav-link,
+.tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-height: 2.75rem;
+  padding: 0;
+  font-family: var(--ff-barlow-cond);
+  font-size: var(--fs-200);
+  line-height: 1.2;
+  letter-spacing: var(--letter-spacing-medium);
+  text-transform: uppercase;
+}
+
+.nav-link {
+  text-decoration: none;
+}
+
+.nav-link span {
+  margin-inline-end: 0.75em;
+  font-weight: 700;
+}
+
+.nav-link::after,
+.tab::after {
+  content: "";
+  position: absolute;
+  background-color: transparent;
+  transition: background-color var(--transition-fast);
+}
+
+.nav-list--horizontal .nav-link::after,
+.tab::after {
+  right: 0;
+  bottom: 0;
+  left: 0;
+  height: 0.1875rem;
+}
+
+.nav-list--horizontal .nav-link {
+  padding-block: var(--sp-200) var(--sp-400);
+}
+
+.tab {
+  padding-block: var(--sp-200);
+}
+
+.nav-list--vertical .nav-link {
+  padding-block: var(--sp-100);
+  padding-inline-end: var(--sp-400);
+}
+
+.nav-list--vertical .nav-link::after {
+  top: 0;
+  right: 0;
+  bottom: 0;
+  width: 0.1875rem;
+}
+
+.nav-link:hover::after,
+.nav-link:focus-visible::after,
+.tab:hover::after,
+.tab:focus-visible::after {
+  background-color: hsl(var(--clr-white) / 0.5);
+}
+
+.nav-link[aria-current="page"]::after,
+.tab[aria-selected="true"]::after {
+  background-color: hsl(var(--clr-white));
+}

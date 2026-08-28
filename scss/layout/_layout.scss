@@ -4,37 +4,17 @@
 }
 
 .section {
-  padding-block: var(--section-padding);
+  padding-block: var(--section-spacing);
 }
 
 .cluster {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--cluster-gap, var(--space-4));
+  gap: var(--cluster-gap, var(--sp-400));
   align-items: center;
 }
 
 .center {
   display: grid;
   place-items: center;
-}
-
-.button {
-  display: inline-flex;
-  align-items: center;
-  justify-content: center;
-  min-height: 2.75rem;
-  padding-inline: var(--space-5);
-  border-radius: var(--radius-sm);
-  background-color: var(--color-accent);
-  color: var(--clr-white);
-  font-weight: 700;
-  line-height: 1;
-  text-decoration: none;
-
-  &:hover,
-  &:focus-visible {
-    background-color: var(--color-accent-hover);
-    color: var(--clr-white);
-  }
 }

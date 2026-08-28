@@ -1,0 +1,44 @@
+.explore-button {
+  --explore-button-size: clamp(9rem, 25vw, 17rem);
+  --explore-button-halo-scale: 1.5;
+
+  position: relative;
+  z-index: 0;
+  display: inline-grid;
+  place-items: center;
+  inline-size: var(--explore-button-size);
+  aspect-ratio: 1;
+  border-radius: 50%;
+  font-family: var(--ff-bellefair);
+  font-size: var(--fs-700);
+  text-transform: uppercase;
+  background-color: hsl(var(--clr-white));
+  color: hsl(var(--clr-blue-900));
+  text-decoration: none;
+}
+
+.explore-button--small {
+  --explore-button-size: 9rem;
+  --explore-button-halo-scale: 2;
+
+  font-size: var(--fs-300);
+}
+
+.explore-button::before {
+  content: "";
+  position: absolute;
+  z-index: -1;
+  inset: 0;
+  border-radius: inherit;
+  background-color: hsl(var(--clr-white) / 0.13);
+  opacity: 0;
+  transition:
+    transform var(--transition-normal),
+    opacity var(--transition-fast);
+}
+
+.explore-button:hover::before,
+.explore-button:focus-visible::before {
+  transform: scale(var(--explore-button-halo-scale));
+  opacity: 1;
+}

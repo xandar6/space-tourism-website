@@ -9,7 +9,7 @@
 }
 
 html {
-  color-scheme: light;
+  color-scheme: dark;
 }
 
 body {
@@ -19,7 +19,8 @@ body {
 img,
 picture,
 svg,
-canvas {
+canvas,
+video {
   display: block;
   max-width: 100%;
 }
@@ -49,12 +50,7 @@ h6 {
   overflow-wrap: break-word;
 }
 
-ul,
-ol {
-  padding: 0;
-  list-style: none;
-}
-
+button,
 a {
-  text-decoration: none;
+  -webkit-tap-highlight-color: transparent;
 }
