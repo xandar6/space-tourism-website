@@ -176,6 +176,7 @@
   margin-block-end: var(--sp-150);
   color: hsl(var(--docs-accent));
   font-size: var(--fs-200);
+  text-transform: capitalize;
 }
 
 .component-demo__title::before {
@@ -186,7 +187,7 @@
 .component-demo__surface {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--sp-600);
+  gap: var(--surface-gap, var(--sp-600));
   align-items: center;
   justify-content: space-evenly;
   min-height: 10rem;
@@ -232,7 +233,7 @@
 .responsive-preview-viewport {
   flex: 1;
   display: grid;
-  justify-items: end;
+  justify-items: var(--justify-items, center);
 }
 
 .responsive-preview-frame {
@@ -260,7 +261,7 @@
 
 
 
-@media (width <= breakpoints.$tablet) {
+@media (width <=breakpoints.$tablet) {
   .typography-grid {
     grid-template-columns: 1fr;
   }
@@ -270,7 +271,7 @@
   }
 }
 
-@media (width <= breakpoints.$small-mobile) {
+@media (width <=breakpoints.$small-mobile) {
   .docs-header {
     align-items: flex-start;
   }

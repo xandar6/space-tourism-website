@@ -181,7 +181,7 @@ p {
 .nav-list,
 .tab-list {
   display: flex;
-  gap: var(--navigation-gap, clamp(var(--sp-300), 4vw, var(--sp-600)));
+  gap: var(--navigation-gap, var(--sp-400));
   align-items: center;
 }
 
@@ -263,6 +263,15 @@ p {
   background-color: hsl(var(--clr-white));
 }
 
+.tab[aria-selected=true] {
+  color: hsl(var(--clr-white));
+}
+
+@media (width <= 32rem) {
+  .tab {
+    font-size: var(--fs-100);
+  }
+}
 .explore-button {
   --explore-button-size: clamp(9rem, 25vw, 17rem);
   --explore-button-halo-scale: 1.5;
@@ -763,6 +772,7 @@ p {
   margin-block-end: var(--sp-150);
   color: hsl(var(--docs-accent));
   font-size: var(--fs-200);
+  text-transform: capitalize;
 }
 
 .component-demo__title::before {
@@ -773,7 +783,7 @@ p {
 .component-demo__surface {
   display: flex;
   flex-wrap: wrap;
-  gap: var(--sp-600);
+  gap: var(--surface-gap, var(--sp-600));
   align-items: center;
   justify-content: space-evenly;
   min-height: 10rem;
@@ -814,7 +824,7 @@ p {
 .responsive-preview-viewport {
   flex: 1;
   display: grid;
-  justify-items: end;
+  justify-items: var(--justify-items, center);
 }
 
 .responsive-preview-frame {

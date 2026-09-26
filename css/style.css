@@ -180,7 +180,7 @@ p {
 .nav-list,
 .tab-list {
   display: flex;
-  gap: var(--navigation-gap, clamp(var(--sp-300), 4vw, var(--sp-600)));
+  gap: var(--navigation-gap, var(--sp-400));
   align-items: center;
 }
 
@@ -262,6 +262,15 @@ p {
   background-color: hsl(var(--clr-white));
 }
 
+.tab[aria-selected=true] {
+  color: hsl(var(--clr-white));
+}
+
+@media (width <= 32rem) {
+  .tab {
+    font-size: var(--fs-100);
+  }
+}
 .explore-button {
   --explore-button-size: clamp(9rem, 25vw, 17rem);
   --explore-button-halo-scale: 1.5;
