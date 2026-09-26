@@ -1,1 +1,3 @@
-// Add project JavaScript here when the challenge needs interactivity.
+import { initHeader } from "./components/header.js";
+
+initHeader();

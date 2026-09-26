@@ -1,301 +1,241 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="Reusable component catalogue for the Space Tourism website."
-    />
 
-    <title>Components | Space Tourism</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description" content="Reusable component catalogue for the Space Tourism website." />
 
-    <link rel="icon" href="../assets/favicon-32x32.png" />
-    <link rel="stylesheet" href="../css/design-system.css" />
-  </head>
+  <title>Components | Space Tourism</title>
 
-  <body>
-    <div class="container">
-      <header class="docs-header">
-        <a href="../index.html" aria-label="Space Tourism home">
-          <img src="../assets/shared/logo.svg" alt="" />
-        </a>
-        <h1>Components</h1>
-      </header>
+  <link rel="icon" href="../assets/favicon-32x32.png" />
+  <link rel="stylesheet" href="../css/design-system.css" />
+</head>
 
-      <nav class="docs-nav" aria-label="Design system">
-        <a href="index.html">Style guide</a>
-        <a href="components.html" aria-current="page">Components</a>
-      </nav>
+<body>
+  <div class="container">
+    <header class="docs-header">
+      <a href="../index.html" aria-label="Space Tourism home">
+        <img src="../assets/shared/logo.svg" alt="" />
+      </a>
+      <h1>Components</h1>
+    </header>
 
-      <main class="docs-main">
-        <section id="single-components" class="docs-section">
-          <h2 class="docs-section-title">
-            <span>01</span>Single components
-          </h2>
+    <nav class="docs-nav" aria-label="Design system">
+      <a href="index.html">Style guide</a>
+      <a href="components.html" aria-current="page">Components</a>
+    </nav>
 
-          <div class="component-grid">
-            <figure class="component-demo" id="navigation-demo">
-              <figcaption class="component-demo__title">
-                Navigation states — desktop and tablet
-              </figcaption>
-              <div class="component-demo__surface">
-                <nav aria-label="Desktop navigation state examples">
-                  <ul class="nav-list nav-list--horizontal">
-                    <li>
-                      <a class="nav-link" href="#navigation-demo">
-                        <span>00</span>Menu
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        class="nav-link"
-                        href="#navigation-demo"
-                        data-demo-state="hover"
-                      >
-                        <span>00</span>Menu
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        class="nav-link"
-                        href="#navigation-demo"
-                        aria-current="page"
-                      >
-                        <span>00</span>Menu
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
+    <main class="docs-main">
+      <section id="single-components" class="docs-section">
+        <h2 class="docs-section-title">
+          <span>01</span>Single components
+        </h2>
+
+        <div class="component-grid">
+          <figure class="component-demo" id="navigation-demo">
+            <figcaption class="component-demo__title">
+              Navigation states — desktop and tablet
+            </figcaption>
+            <div class="component-demo__surface">
+              <nav aria-label="Desktop navigation state examples">
+                <ul class="nav-list nav-list--horizontal">
+                  <li>
+                    <a class="nav-link" href="#navigation-demo">
+                      <span>00</span>Menu
+                    </a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="#navigation-demo" data-demo-state="hover">
+                      <span>00</span>Menu
+                    </a>
+                  </li>
+                  <li>
+                    <a class="nav-link" href="#navigation-demo" aria-current="page">
+                      <span>00</span>Menu
+                    </a>
+                  </li>
+                </ul>
+              </nav>
+            </div>
+          </figure>
+
+          <figure class="component-demo">
+            <figcaption class="component-demo__title">
+              Navigation states — mobile
+            </figcaption>
+            <div class="component-demo__surface">
+              <div class="responsive-preview-viewport">
+                <iframe style="--preview-height: 12rem;"
+                  class="responsive-preview-frame responsive-preview-frame--mobile"
+                  src="previews/navigation-mobile.html"
+                  title="Navigation component preview"
+                  loading="lazy">
+                </iframe>
               </div>
-            </figure>
+            </div>
+          </figure>
 
-            <figure class="component-demo">
-              <figcaption class="component-demo__title">
-                Navigation states — mobile
-              </figcaption>
-              <div class="component-demo__surface">
-                <nav aria-label="Mobile navigation state examples">
-                  <ul class="nav-list nav-list--vertical">
-                    <li>
-                      <a class="nav-link" href="#navigation-demo">
-                        <span>00</span>Menu
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        class="nav-link"
-                        href="#navigation-demo"
-                        data-demo-state="hover"
-                      >
-                        <span>00</span>Menu
-                      </a>
-                    </li>
-                    <li>
-                      <a
-                        class="nav-link"
-                        href="#navigation-demo"
-                        aria-current="page"
-                      >
-                        <span>00</span>Menu
-                      </a>
-                    </li>
-                  </ul>
-                </nav>
-              </div>
-            </figure>
-
-            <figure class="component-demo component-demo--wide">
-              <figcaption class="component-demo__title">
-                Tab states
-              </figcaption>
-              <div class="component-demo__surface">
-                <div class="tab-list" role="tablist" aria-label="Tab states">
-                  <button
-                    class="tab"
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    tabindex="-1"
-                  >
-                    Tab menu
-                  </button>
-                  <button
-                    class="tab"
-                    type="button"
-                    role="tab"
-                    aria-selected="false"
-                    tabindex="-1"
-                    data-demo-state="hover"
-                  >
-                    Tab menu
-                  </button>
-                  <button
-                    class="tab"
-                    type="button"
-                    role="tab"
-                    aria-selected="true"
-                  >
-                    Tab menu
-                  </button>
-                </div>
-              </div>
-            </figure>
-
-            <figure class="component-demo component-demo--wide">
-              <figcaption class="component-demo__title">
-                Explore button states — desktop and tablet
-              </figcaption>
-              <div class="component-demo__surface component-demo__surface--buttons">
-                <button class="explore-button" type="button">Explore</button>
-                <button
-                  class="explore-button"
-                  type="button"
-                  data-demo-state="hover"
-                >
-                  Explore
+          <figure class="component-demo component-demo--wide">
+            <figcaption class="component-demo__title">
+              Tab states
+            </figcaption>
+            <div class="component-demo__surface">
+              <div class="tab-list" role="tablist" aria-label="Tab states">
+                <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1">
+                  Tab menu
+                </button>
+                <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1"
+                  data-demo-state="hover">
+                  Tab menu
+                </button>
+                <button class="tab" type="button" role="tab" aria-selected="true">
+                  Tab menu
                 </button>
               </div>
-            </figure>
+            </div>
+          </figure>
 
-            <figure class="component-demo component-demo--wide">
-              <figcaption class="component-demo__title">
-                Explore button states — mobile
-              </figcaption>
-              <div class="component-demo__surface component-demo__surface--buttons">
-                <button class="explore-button explore-button--small" type="button">
-                  Explore
+          <figure class="component-demo component-demo--wide">
+            <figcaption class="component-demo__title">
+              Explore button states — desktop and tablet
+            </figcaption>
+            <div class="component-demo__surface component-demo__surface--buttons">
+              <button class="explore-button" type="button">
+                Explore
+              </button>
+              <button class="explore-button" type="button" data-demo-state="hover">
+                Explore
+              </button>
+            </div>
+          </figure>
+
+          <figure class="component-demo component-demo--wide">
+            <figcaption class="component-demo__title">
+              Explore button states — mobile
+            </figcaption>
+            <div class="component-demo__surface component-demo__surface--buttons">
+              <button class="explore-button explore-button--small" type="button">
+                Explore
+              </button>
+              <button class="explore-button explore-button--small" type="button" data-demo-state="hover">
+                Explore
+              </button>
+            </div>
+          </figure>
+
+          <figure class="component-demo">
+            <figcaption class="component-demo__title">
+              Dot pagination — desktop
+            </figcaption>
+            <div class="component-demo__surface">
+              <div class="dot-pagination" role="group" aria-label="Crew member">
+                <button type="button" aria-label="View crew member one"></button>
+                <button type="button" aria-label="View crew member two" data-demo-state="hover"></button>
+                <button type="button" aria-label="View crew member three" aria-current="true"></button>
+              </div>
+            </div>
+          </figure>
+
+          <figure class="component-demo">
+            <figcaption class="component-demo__title">
+              Dot pagination — mobile
+            </figcaption>
+            <div class="component-demo__surface">
+              <div class="dot-pagination dot-pagination--small" role="group" aria-label="Crew member">
+                <button type="button" aria-label="View crew member one"></button>
+                <button type="button" aria-label="View crew member two" data-demo-state="hover"></button>
+                <button type="button" aria-label="View crew member three" aria-current="true"></button>
+              </div>
+            </div>
+          </figure>
+
+          <figure class="component-demo">
+            <figcaption class="component-demo__title">
+              Number pagination — desktop
+            </figcaption>
+            <div class="component-demo__surface">
+              <div class="number-pagination" role="group" aria-label="Technology">
+                <button type="button" aria-label="View technology one">
+                  1
                 </button>
-                <button
-                  class="explore-button explore-button--small"
-                  type="button"
-                  data-demo-state="hover"
-                >
-                  Explore
+                <button type="button" aria-label="View technology two" data-demo-state="hover">
+                  2
+                </button>
+                <button type="button" aria-label="View technology three" aria-current="true">
+                  3
                 </button>
               </div>
-            </figure>
+            </div>
+          </figure>
 
-            <figure class="component-demo">
-              <figcaption class="component-demo__title">
-                Dot pagination — desktop
-              </figcaption>
-              <div class="component-demo__surface">
-                <div
-                  class="dot-pagination"
-                  role="group"
-                  aria-label="Crew member"
-                >
-                  <button type="button" aria-label="View crew member one"></button>
-                  <button
-                    type="button"
-                    aria-label="View crew member two"
-                    data-demo-state="hover"
-                  ></button>
-                  <button
-                    type="button"
-                    aria-label="View crew member three"
-                    aria-current="true"
-                  ></button>
-                </div>
+          <figure class="component-demo">
+            <figcaption class="component-demo__title">
+              Number pagination — mobile
+            </figcaption>
+            <div class="component-demo__surface">
+              <div class="number-pagination number-pagination--small" role="group" aria-label="Technology">
+                <button type="button" aria-label="View technology one">
+                  1
+                </button>
+                <button type="button" aria-label="View technology two" data-demo-state="hover">
+                  2
+                </button>
+                <button type="button" aria-label="View technology three" aria-current="true">
+                  3
+                </button>
               </div>
-            </figure>
+            </div>
+          </figure>
+        </div>
+      </section>
 
-            <figure class="component-demo">
-              <figcaption class="component-demo__title">
-                Dot pagination — mobile
-              </figcaption>
-              <div class="component-demo__surface">
-                <div
-                  class="dot-pagination dot-pagination--small"
-                  role="group"
-                  aria-label="Crew member"
-                >
-                  <button type="button" aria-label="View crew member one"></button>
-                  <button
-                    type="button"
-                    aria-label="View crew member two"
-                    data-demo-state="hover"
-                  ></button>
-                  <button
-                    type="button"
-                    aria-label="View crew member three"
-                    aria-current="true"
-                  ></button>
-                </div>
+      <section id="grouped-components" class="docs-section">
+        <h2 class="docs-section-title">
+          <span>02</span>Grouped components
+        </h2>
+        <div class="component-grid">
+
+          <figure class="component-demo component-demo--wide">
+            <figcaption class="component-demo__title">
+              Navigation
+            </figcaption>
+            <div class="component-demo__surface">
+
+              <div class="responsive-preview-viewport flow">
+
+                <iframe
+                  style="--preview-height: 6rem;"
+                  class="responsive-preview-frame responsive-preview-frame--desktop"
+                  src="previews/header.html"
+                  title="Primary header desktop preview"
+                  loading="lazy">
+                </iframe>
+
+                <iframe
+                  style="--preview-height: 6rem;"
+                  class="responsive-preview-frame responsive-preview-frame--tablet"
+                  src="previews/header.html"
+                  title="Primary header tablet preview"
+                  loading="lazy">
+                </iframe>
+
+                <iframe
+                  style="--preview-height: 6rem;"
+                  class="responsive-preview-frame responsive-preview-frame--mobile"
+                  src="previews/header.html"
+                  title="Primary header mobile preview"
+                  loading="lazy">
+                </iframe>
+
               </div>
-            </figure>
 
-            <figure class="component-demo">
-              <figcaption class="component-demo__title">
-                Number pagination — desktop
-              </figcaption>
-              <div class="component-demo__surface">
-                <div
-                  class="number-pagination"
-                  role="group"
-                  aria-label="Technology"
-                >
-                  <button type="button" aria-label="View technology one">1</button>
-                  <button
-                    type="button"
-                    aria-label="View technology two"
-                    data-demo-state="hover"
-                  >
-                    2
-                  </button>
-                  <button
-                    type="button"
-                    aria-label="View technology three"
-                    aria-current="true"
-                  >
-                    3
-                  </button>
-                </div>
-              </div>
-            </figure>
+            </div>
+          </figure>
+        </div>
+      </section>
+    </main>
+  </div>
+</body>
 
-            <figure class="component-demo">
-              <figcaption class="component-demo__title">
-                Number pagination — mobile
-              </figcaption>
-              <div class="component-demo__surface">
-                <div
-                  class="number-pagination number-pagination--small"
-                  role="group"
-                  aria-label="Technology"
-                >
-                  <button type="button" aria-label="View technology one">1</button>
-                  <button
-                    type="button"
-                    aria-label="View technology two"
-                    data-demo-state="hover"
-                  >
-                    2
-                  </button>
-                  <button
-                    type="button"
-                    aria-label="View technology three"
-                    aria-current="true"
-                  >
-                    3
-                  </button>
-                </div>
-              </div>
-            </figure>
-          </div>
-        </section>
-
-        <section id="grouped-components" class="docs-section">
-          <h2 class="docs-section-title">
-            <span>02</span>Grouped components
-          </h2>
-          <p class="docs-note">
-            Compose the production components above here to document complete
-            navigation, tab, and pagination patterns across responsive layouts.
-          </p>
-        </section>
-      </main>
-    </div>
-  </body>
 </html>

@@ -1,3 +1,5 @@
+@use "../abstracts/breakpoints";
+
 :root {
   --docs-accent: 268 88% 81%;
   --docs-border: 266 100% 64%;
@@ -90,7 +92,7 @@
   margin-block-start: var(--sp-200);
 }
 
-.color-swatch dl > div {
+.color-swatch dl>div {
   display: grid;
   grid-template-columns: 3rem 1fr;
   gap: var(--sp-200);
@@ -129,7 +131,7 @@
   overflow-wrap: anywhere;
 }
 
-.typography-column > .typography-preset:last-child .typography-preset__sample {
+.typography-column>.typography-preset:last-child .typography-preset__sample {
   padding-block-end: 0;
 }
 
@@ -226,7 +228,39 @@
   color: var(--color-text-muted);
 }
 
-@media (max-width: 48rem) {
+
+.responsive-preview-viewport {
+  flex: 1;
+  display: grid;
+  justify-items: end;
+}
+
+.responsive-preview-frame {
+  display: block;
+  border: 0;
+  block-size: var(--preview-height, 10rem);
+  background-color: hsl(var(--clr-blue-900));
+  inline-size: 100%;
+  overflow: clip;
+}
+
+.responsive-preview-frame--desktop {
+  inline-size: min(100%, 64rem);
+  /* 1024px */
+}
+
+.responsive-preview-frame--tablet {
+  inline-size: min(100%, breakpoints.$tablet);
+  /* 768px */
+}
+
+.responsive-preview-frame--mobile {
+  inline-size: min(100%, 23.4375rem);
+}
+
+
+
+@media (width <= breakpoints.$tablet) {
   .typography-grid {
     grid-template-columns: 1fr;
   }
@@ -236,7 +270,7 @@
   }
 }
 
-@media (max-width: 32rem) {
+@media (width <= breakpoints.$small-mobile) {
   .docs-header {
     align-items: flex-start;
   }

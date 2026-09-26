@@ -55,7 +55,14 @@
   --container-padding: clamp(1.5rem, 5vw, 2.5rem);
   --section-spacing: clamp(4rem, 8vw, 6rem);
 
+  /* Component sizing */
+  --size-interactive-target: 2.75rem; // 44px
+  --size-navigation-indicator: 0.1875rem; // 3px
+
   /* Motion */
-  --transition-fast: 200ms ease;
-  --transition-normal: 300ms ease;
+  --duration-fast: 200ms;
+  --duration-normal: 300ms;
+  --ease-standard: ease;
+  --transition-fast: var(--duration-fast) var(--ease-standard);
+  --transition-normal: var(--duration-normal) var(--ease-standard);
 }
