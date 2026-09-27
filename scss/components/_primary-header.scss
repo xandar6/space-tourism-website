@@ -83,7 +83,7 @@
     inline-size: var(--sp-500);
   }
 
-  .primary-header__menu-toggle {
+  .js .primary-header__menu-toggle {
     z-index: 2;
     display: block;
     grid-column: 2;
@@ -91,7 +91,7 @@
     margin-inline-start: auto;
   }
 
-  .primary-navigation {
+  .js .primary-navigation {
     position: fixed;
     z-index: 1;
     inset: 0 0 0 30%;
@@ -104,7 +104,7 @@
       visibility 0s var(--duration-normal);
   }
 
-  .primary-navigation[data-visible="true"] {
+  .js .primary-navigation[data-visible="true"] {
     visibility: visible;
     transform: translateX(0);
     transition-delay: 0s;

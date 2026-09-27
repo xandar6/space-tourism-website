@@ -9,8 +9,9 @@
   <title>Components | Space Tourism</title>
 
   <link rel="icon" href="../assets/favicon-32x32.png" />
-  <link rel="stylesheet" href="../css/design-system.css" />
-  <script src="../js/design-system.js" defer></script>
+  <link rel="stylesheet" href="../css/style.css" />
+  <link rel="stylesheet" href="css/documentation.css" />
+  <script type="module" src="js/component-examples.js"></script>
 </head>
 
 <body>
@@ -28,8 +29,11 @@
     </nav>
 
     <main class="docs-main">
-      <section id="single-components" class="docs-section">
-        <h2 class="docs-section-title">
+      <section
+        id="single-components"
+        class="docs-section"
+        aria-labelledby="single-components-title">
+        <h2 class="docs-section-title" id="single-components-title">
           <span>01</span>Single components
         </h2>
 
@@ -40,7 +44,7 @@
             </figcaption>
             <div class="component-demo__surface">
               <nav aria-label="Desktop navigation state examples">
-                <ul class="nav-list nav-list--horizontal">
+                <ul class="nav-list">
                   <li>
                     <a class="nav-link" href="#navigation-demo">
                       <span>00</span>Menu
@@ -67,9 +71,9 @@
             </figcaption>
             <div class="component-demo__surface">
               <div class="responsive-preview-viewport">
-                <iframe style="--preview-height: 13rem;"
+                <iframe style="--preview-height: 15rem;"
                   class="responsive-preview-frame responsive-preview-frame--mobile"
-                  src="previews/navigation-mobile.html"
+                  src="previews/mobile-navigation-states.html"
                   title="Navigation component preview"
                   loading="lazy">
                 </iframe>
@@ -82,15 +86,14 @@
               Tab states
             </figcaption>
             <div class="component-demo__surface">
-              <div class="tab-list" role="tablist" aria-label="Tab states">
-                <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1">
+              <div class="tab-list" aria-label="Tab state examples">
+                <button class="tab" type="button">
                   Tab menu
                 </button>
-                <button class="tab" type="button" role="tab" aria-selected="false" tabindex="-1"
-                  data-demo-state="hover">
+                <button class="tab" type="button" data-demo-state="hover">
                   Tab menu
                 </button>
-                <button class="tab" type="button" role="tab" aria-selected="true">
+                <button class="tab" type="button" data-demo-state="selected">
                   Tab menu
                 </button>
               </div>
@@ -102,12 +105,12 @@
               Explore button states — desktop and tablet
             </figcaption>
             <div class="component-demo__surface component-demo__surface--buttons">
-              <button class="explore-button" type="button">
+              <a class="explore-button" href="#grouped-components">
                 Explore
-              </button>
-              <button class="explore-button" type="button" data-demo-state="hover">
+              </a>
+              <a class="explore-button" href="#grouped-components" data-demo-state="hover">
                 Explore
-              </button>
+              </a>
             </div>
           </figure>
 
@@ -116,12 +119,15 @@
               Explore button states — mobile
             </figcaption>
             <div class="component-demo__surface component-demo__surface--buttons">
-              <button class="explore-button explore-button--small" type="button">
+              <a class="explore-button explore-button--small" href="#grouped-components">
                 Explore
-              </button>
-              <button class="explore-button explore-button--small" type="button" data-demo-state="hover">
+              </a>
+              <a
+                class="explore-button explore-button--small"
+                href="#grouped-components"
+                data-demo-state="hover">
                 Explore
-              </button>
+              </a>
             </div>
           </figure>
 
@@ -153,10 +159,10 @@
 
           <figure class="component-demo">
             <figcaption class="component-demo__title">
-              Number pagination — desktop
+              Numbered pagination — desktop
             </figcaption>
             <div class="component-demo__surface">
-              <div class="number-pagination" role="group" aria-label="Technology">
+              <div class="numbered-pagination" role="group" aria-label="Technology">
                 <button type="button" aria-label="View technology one">
                   1
                 </button>
@@ -172,10 +178,10 @@
 
           <figure class="component-demo">
             <figcaption class="component-demo__title">
-              Number pagination — mobile
+              Numbered pagination — mobile
             </figcaption>
             <div class="component-demo__surface">
-              <div class="number-pagination number-pagination--small" role="group" aria-label="Technology">
+              <div class="numbered-pagination numbered-pagination--small" role="group" aria-label="Technology">
                 <button type="button" aria-label="View technology one">
                   1
                 </button>
@@ -191,8 +197,11 @@
         </div>
       </section>
 
-      <section id="grouped-components" class="docs-section">
-        <h2 class="docs-section-title">
+      <section
+        id="grouped-components"
+        class="docs-section"
+        aria-labelledby="grouped-components-title">
+        <h2 class="docs-section-title" id="grouped-components-title">
           <span>02</span>Grouped components
         </h2>
         <div class="component-grid">
@@ -206,25 +215,25 @@
               <div class="responsive-preview-viewport flow">
 
                 <iframe
-                  style="--preview-height: 6rem;"
+                  style="--preview-height: 8rem;"
                   class="responsive-preview-frame responsive-preview-frame--desktop"
-                  src="previews/header.html"
+                  src="previews/primary-header.html"
                   title="Primary header desktop preview"
                   loading="lazy">
                 </iframe>
 
                 <iframe
-                  style="--preview-height: 6rem;"
+                  style="--preview-height: 8rem;"
                   class="responsive-preview-frame responsive-preview-frame--tablet"
-                  src="previews/header.html"
+                  src="previews/primary-header.html"
                   title="Primary header tablet preview"
                   loading="lazy">
                 </iframe>
 
                 <iframe
-                  style="--preview-height: 6rem;"
+                  style="--preview-height: 8rem;"
                   class="responsive-preview-frame responsive-preview-frame--mobile"
-                  src="previews/header.html"
+                  src="previews/primary-header.html"
                   title="Primary header mobile preview"
                   loading="lazy">
                 </iframe>
@@ -234,97 +243,107 @@
             </div>
           </figure>
 
-          <figure class="component-demo">
-            <figcaption class="component-demo__title">
-              Destination Tab - Desktop & Tablet
-            </figcaption>
-            <div class="component-demo__surface" data-destination-tab-examples
-              style="flex-direction: column; --surface-gap: var(--sp-200)"></div>
-          </figure>
+          <div class="component-variant-grid">
+            <figure class="component-demo">
+              <figcaption class="component-demo__title">
+                Destination tabs — desktop and tablet
+              </figcaption>
+              <div
+                class="component-demo__surface component-demo__surface--matrix component-demo__surface--compact"
+                data-example-matrix="destination-tabs"></div>
+            </figure>
 
-          <figure class="component-demo">
-            <figcaption class="component-demo__title">
-              Destination Tab - Mobile
-            </figcaption>
-            <div class="component-demo__surface">
-              <div class="responsive-preview-viewport">
-                <iframe
-                  style="--preview-height: 16rem;"
-                  class="responsive-preview-frame responsive-preview-frame--mobile"
-                  src="previews/destination-tab-mobile.html"
-                  title="Destination tab mobile preview"
-                  loading="lazy">
-                </iframe>
+            <figure class="component-demo">
+              <figcaption class="component-demo__title">
+                Destination tabs — mobile
+              </figcaption>
+              <div class="component-demo__surface">
+                <div class="responsive-preview-viewport">
+                  <iframe
+                    style="--preview-height: 18rem;"
+                    class="responsive-preview-frame responsive-preview-frame--mobile"
+                    src="previews/destination-tabs.html"
+                    title="Destination tabs mobile preview"
+                    loading="lazy">
+                  </iframe>
+                </div>
               </div>
-            </div>
-          </figure>
+            </figure>
+          </div>
 
-          <figure class="component-demo">
-            <figcaption class="component-demo__title">
-              Numbered pagination - Desktop
-            </figcaption>
-            <div class="component-demo__surface" data-numbered-pagination-examples
-              style="flex-direction: column; --surface-gap: var(--sp-600)"></div>
-          </figure>
+          <div class="component-variant-grid">
+            <figure class="component-demo">
+              <figcaption class="component-demo__title">
+                Numbered pagination — desktop
+              </figcaption>
+              <div
+                class="component-demo__surface component-demo__surface--matrix component-demo__surface--spacious"
+                data-example-matrix="numbered-pagination"></div>
+            </figure>
 
-          <figure class="component-demo">
-            <figcaption class="component-demo__title">
-              Numbered pagination - tablet
-            </figcaption>
-            <div class="component-demo__surface">
-              <div class="responsive-preview-viewport">
-                <iframe
-                  style="--preview-height: 16rem;"
-                  class="responsive-preview-frame responsive-preview-frame--tablet"
-                  src="previews/numbered-pagination.html"
-                  title="Numbered pagination tablet preview"
-                  loading="lazy">
-                </iframe>
+            <figure class="component-demo">
+              <figcaption class="component-demo__title">
+                Numbered pagination — tablet
+              </figcaption>
+              <div class="component-demo__surface">
+                <div class="responsive-preview-viewport">
+                  <iframe
+                    style="--preview-height: 18rem;"
+                    class="responsive-preview-frame responsive-preview-frame--tablet"
+                    src="previews/numbered-pagination.html"
+                    title="Numbered pagination tablet preview"
+                    loading="lazy">
+                  </iframe>
+
+                </div>
               </div>
-            </div>
-          </figure>
+            </figure>
 
-          <figure class="component-demo component-demo--wide">
-            <figcaption class="component-demo__title">
-              Numbered pagination - mobile
-            </figcaption>
-            <div class="component-demo__surface">
-              <div class="responsive-preview-viewport">
-                <iframe
-                  style="--preview-height: 14rem;"
-                  class="responsive-preview-frame responsive-preview-frame--mobile"
-                  src="previews/numbered-pagination.html"
-                  title="Numbered pagination mobile preview"
-                  loading="lazy">
-                </iframe>
+            <figure class="component-demo">
+              <figcaption class="component-demo__title">
+                Numbered pagination — mobile
+              </figcaption>
+              <div class="component-demo__surface">
+                <div class="responsive-preview-viewport">
+                  <iframe
+                    style="--preview-height: 16rem;"
+                    class="responsive-preview-frame responsive-preview-frame--mobile"
+                    src="previews/numbered-pagination.html"
+                    title="Numbered pagination mobile preview"
+                    loading="lazy">
+                  </iframe>
+                </div>
               </div>
-            </div>
-          </figure>
+            </figure>
+          </div>
 
-          <figure class="component-demo">
-            <figcaption class="component-demo__title">
-              Dot pagination - Desktop
-            </figcaption>
-            <div class="component-demo__surface" data-dot-pagination-examples
-              style="flex-direction: column; --surface-gap: var(--sp-600)"></div>
-          </figure>
+          <div class="component-variant-grid">
+            <figure class="component-demo">
+              <figcaption class="component-demo__title">
+                Dot pagination — desktop
+              </figcaption>
+              <div
+                class="component-demo__surface component-demo__surface--matrix component-demo__surface--spacious"
+                data-example-matrix="dot-pagination"></div>
+            </figure>
 
-          <figure class="component-demo">
-            <figcaption class="component-demo__title">
-              Dot pagination - tablet
-            </figcaption>
-            <div class="component-demo__surface">
-              <div class="responsive-preview-viewport">
-                <iframe
-                  style="--preview-height: 13rem;"
-                  class="responsive-preview-frame responsive-preview-frame--mobile"
-                  src="previews/dot-pagination.html"
-                  title="Numbered pagination mobile preview"
-                  loading="lazy">
-                </iframe>
+            <figure class="component-demo">
+              <figcaption class="component-demo__title">
+                Dot pagination — mobile
+              </figcaption>
+              <div class="component-demo__surface">
+                <div class="responsive-preview-viewport">
+                  <iframe
+                    style="--preview-height: 12rem;"
+                    class="responsive-preview-frame responsive-preview-frame--mobile"
+                    src="previews/dot-pagination.html"
+                    title="Dot pagination mobile preview"
+                    loading="lazy">
+                  </iframe>
+                </div>
               </div>
-            </div>
-          </figure>
+            </figure>
+          </div>
 
         </div>
       </section>

@@ -4,9 +4,10 @@
   "private": true,
   "description": "Frontend Mentor space tourism multi-page website.",
   "scripts": {
-    "sass": "sass --update scss/style.scss:css/style.css scss/design-system.scss:css/design-system.css --style=expanded --no-source-map",
-    "sass:watch": "sass --watch scss/style.scss:css/style.css scss/design-system.scss:css/design-system.css --style=expanded --no-source-map",
-    "sass:build": "sass --update scss/style.scss:css/style.css scss/design-system.scss:css/design-system.css --style=compressed --no-source-map"
+    "sass": "sass --update scss/main.scss:css/style.css design-system/scss/main.scss:design-system/css/documentation.css --style=expanded --no-source-map",
+    "sass:watch": "sass --watch scss/main.scss:css/style.css design-system/scss/main.scss:design-system/css/documentation.css --style=expanded --no-source-map",
+    "sass:build": "sass --update scss/main.scss:css/style.css design-system/scss/main.scss:design-system/css/documentation.css --style=compressed --no-source-map",
+    "check": "npm run sass && node --check js/main.js && node --check js/components/primary-header.js && node --check design-system/js/component-examples.js"
   },
   "devDependencies": {
     "sass": "^1.89.0"

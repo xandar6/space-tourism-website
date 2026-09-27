@@ -1,0 +1,58 @@
+<!doctype html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+
+    <title>Primary header preview</title>
+
+    <link rel="stylesheet" href="../../css/style.css" />
+    <link rel="stylesheet" href="../css/documentation.css" />
+    <script type="module" src="../../js/main.js"></script>
+  </head>
+
+  <body class="preview-page preview-center">
+    <header class="primary-header">
+      <a
+        class="primary-header__logo"
+        href="../../index.html"
+        aria-label="Space Tourism home"
+      >
+        <img src="../../assets/shared/logo.svg" alt="" />
+      </a>
+
+      <button
+        class="primary-header__menu-toggle"
+        type="button"
+        aria-controls="primary-navigation-preview"
+        aria-expanded="false"
+      >
+        <span class="sr-only">Menu</span>
+      </button>
+
+      <nav
+        class="primary-navigation"
+        id="primary-navigation-preview"
+        data-visible="false"
+        aria-label="Primary navigation"
+      >
+        <ul class="nav-list">
+          <li>
+            <a class="nav-link" href="../../index.html" aria-current="page">
+              <span>00</span>Home
+            </a>
+          </li>
+          <li>
+            <a class="nav-link" href="#destination"><span>01</span>Destination</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#crew"><span>02</span>Crew</a>
+          </li>
+          <li>
+            <a class="nav-link" href="#technology"><span>03</span>Technology</a>
+          </li>
+        </ul>
+      </nav>
+    </header>
+  </body>
+</html>

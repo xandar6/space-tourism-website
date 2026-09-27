@@ -1,0 +1,49 @@
+@use "../abstracts/breakpoints";
+
+.tab-list {
+  display: flex;
+  gap: var(--tab-gap, var(--sp-400));
+  align-items: center;
+}
+
+.tab {
+  position: relative;
+  display: inline-flex;
+  align-items: center;
+  min-block-size: var(--size-interactive-target);
+  padding-block: var(--sp-200);
+  font-family: var(--ff-barlow-cond);
+  font-size: var(--fs-200);
+  line-height: 1.2;
+  letter-spacing: var(--letter-spacing-medium);
+  text-transform: uppercase;
+}
+
+.tab::after {
+  content: "";
+  position: absolute;
+  inset-inline: 0;
+  inset-block: auto 0;
+  block-size: var(--size-navigation-indicator);
+  background-color: transparent;
+  transition: background-color var(--transition-fast);
+}
+
+.tab:hover::after,
+.tab:focus-visible::after {
+  background-color: hsl(var(--clr-white) / 0.5);
+}
+
+.tab[aria-selected="true"] {
+  color: hsl(var(--clr-white));
+}
+
+.tab[aria-selected="true"]::after {
+  background-color: hsl(var(--clr-white));
+}
+
+@media (width <= breakpoints.$small-mobile) {
+  .tab {
+    font-size: var(--fs-100);
+  }
+}
