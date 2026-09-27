@@ -1,7 +1,9 @@
+@use "../abstracts/breakpoints";
+
 .dot-pagination,
 .number-pagination {
   display: flex;
-  gap: var(--pagination-gap, clamp(var(--sp-200), 4vw, var(--sp-600)));
+  gap: var(--pagination-gap, clamp(var(--sp-300), 5vw, var(--sp-600)));
   align-items: center;
   justify-content: center;
 }
@@ -29,8 +31,10 @@
 }
 
 .number-pagination button {
-  inline-size: var(--pagination-number-size, clamp(3.5rem, 8vw, 5rem));
-  aspect-ratio: 1;
+  display: grid;
+  place-items: center;
+  inline-size: 5rem;
+  block-size: 5rem;
   padding: 0;
   border-radius: 50%;
   border: 1px solid hsl(var(--clr-white) / 0.35);
@@ -60,4 +64,20 @@
   border-color: hsl(var(--clr-white));
   background-color: hsl(var(--clr-white));
   color: hsl(var(--clr-blue-900));
+}
+
+@media (width <=breakpoints.$tablet) {
+  .number-pagination button {
+    inline-size: 3.125rem;
+    block-size: 3.125rem;
+    font-size: var(--fs-500);
+  }
+}
+
+@media (width <=breakpoints.$small-mobile) {
+  .number-pagination button {
+    inline-size: 2.5rem;
+    block-size: 2.5rem;
+    font-size: var(--fs-750);
+  }
 }
