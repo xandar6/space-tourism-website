@@ -1,3 +1,5 @@
+@use "../abstracts/breakpoints";
+
 .sr-only {
    position: absolute;
    width: 1px;
@@ -10,7 +12,7 @@
    border: 0;
 }
 
-.flow > * + * {
+.flow>*+* {
    margin-block-start: var(--flow-space, var(--sp-400));
 }
 
@@ -93,6 +95,10 @@
    font-weight: 700;
 }
 
+.letter-spacing-normal {
+   letter-spacing: normal;
+}
+
 .letter-spacing-wide {
    letter-spacing: var(--letter-spacing-wide);
 }
@@ -105,36 +111,50 @@
    line-height: var(--line-height-body);
 }
 
+.line-height-normal {
+   line-height: 1;
+}
+
 .fs-1100 {
    font-size: var(--fs-1100);
 }
+
 .fs-1000 {
    font-size: var(--fs-1000);
 }
+
 .fs-900 {
    font-size: var(--fs-900);
 }
+
 .fs-800 {
    font-size: var(--fs-800);
 }
+
 .fs-700 {
    font-size: var(--fs-700);
 }
+
 .fs-600 {
    font-size: var(--fs-600);
 }
+
 .fs-500 {
    font-size: var(--fs-500);
 }
+
 .fs-400 {
    font-size: var(--fs-400);
 }
+
 .fs-300 {
    font-size: var(--fs-300);
 }
+
 .fs-200 {
    font-size: var(--fs-200);
 }
+
 .fs-100 {
    font-size: var(--fs-100);
 }
@@ -151,13 +171,22 @@
 
 .text-preset-1 {
    font-size: var(--fs-1100);
+
+   @media (width <=breakpoints.$mobile) {
+      & {
+         font-size: 5rem;
+      }
+   }
 }
+
 .text-preset-2 {
    font-size: var(--fs-1000);
 }
+
 .text-preset-3 {
    font-size: var(--fs-800);
 }
+
 .text-preset-4 {
    font-size: var(--fs-700);
 }
@@ -170,10 +199,24 @@
 }
 
 .text-preset-5 {
-   font-size: var(--fs-400);
+   font-size: var(--fs-600);
    line-height: 1.68;
    letter-spacing: 0.2em;
+
+   @media (width <=breakpoints.$tablet) {
+      & {
+         font-size: var(--fs-400);
+      }
+   }
+
+   @media (width <=breakpoints.$mobile) {
+      & {
+         font-size: var(--fs-200);
+      }
+   }
 }
+
+
 
 .text-preset-6 {
    font-size: var(--fs-600);
@@ -195,9 +238,22 @@
    font-family: var(--ff-barlow);
    font-size: var(--fs-300);
    line-height: var(--line-height-body);
+
+   @media (width <=breakpoints.$tablet) {
+      & {
+         font-size: var(--fs-200);
+      }
+   }
+
+   @media (width <=breakpoints.$mobile) {
+      & {
+         font-size: 0.938rem;
+      }
+   }
 }
 
 @media (prefers-reduced-motion: reduce) {
+
    *,
    *::before,
    *::after {

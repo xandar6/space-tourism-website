@@ -1,25 +1,66 @@
 <!doctype html>
 <html lang="en">
-  <head>
-    <meta charset="UTF-8" />
-    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta
-      name="description"
-      content="A responsive multi-page space tourism experience."
-    />
 
-    <title>Space Tourism</title>
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <meta name="description"
+    content="Explore the Moon, Mars, and beyond with Space Tourism. Discover your destination, meet the crew, and learn about the journey." />
+  <title>Space Tourism | Home</title>
+  <link rel="icon" href="assets/favicon-32x32.png" />
+  <link rel="preconnect" href="https://fonts.googleapis.com" />
+  <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+  <link rel="stylesheet" href="css/style.css" />
+  <script type="module" src="js/main.js"></script>
+</head>
 
-    <link rel="icon" href="assets/favicon-32x32.png" />
-    <link rel="stylesheet" href="css/style.css" />
-    <script type="module" src="js/main.js"></script>
-  </head>
+<body class="home">
+  <a class="skip-link" href="#main-content">Skip to content</a>
 
-  <body>
-    <main class="site-main container">
-      <h1>Space Tourism</h1>
-      <p>The website experience is currently in development.</p>
-      <p><a href="design-system/">View the design system</a></p>
-    </main>
-  </body>
+  <header class="primary-header">
+    <a class="primary-header__logo" href="index.html" aria-label="Space Tourism home">
+      <img src="assets/shared/logo.svg" width="48" height="48" alt="" />
+    </a>
+
+    <button class="primary-header__menu-toggle" type="button" aria-controls="primary-navigation" aria-expanded="false">
+      <span class="sr-only">Menu</span>
+    </button>
+
+    <nav class="primary-navigation" id="primary-navigation" data-visible="false" aria-label="Primary navigation">
+      <ul class="nav-list">
+        <li>
+          <a class="nav-link" href="index.html" aria-current="page"><span aria-hidden="true">00</span>Home</a>
+        </li>
+        <li>
+          <a class="nav-link" href="destination.html"><span aria-hidden="true">01</span>Destination</a>
+        </li>
+        <li>
+          <a class="nav-link" href="crew.html"><span aria-hidden="true">02</span>Crew</a>
+        </li>
+        <li>
+          <a class="nav-link" href="technology.html"><span aria-hidden="true">03</span>Technology</a>
+        </li>
+      </ul>
+    </nav>
+  </header>
+
+  <main class="grid-container home__main" id="main-content" tabindex="-1">
+    <div class="home__intro">
+      <h1 class="home__heading text-preset-5 text-muted">
+        So, you want to travel to
+        <span class="home__title text-preset-1 text-white">Space</span>
+      </h1>
+      <p class="home__description text-preset-9 text-muted">
+        Let’s face it; if you want to go to space, you might as well genuinely go to
+        outer space and not hover kind of on the edge of it. Well sit back, and relax
+        because we’ll give you a truly out of this world experience!
+      </p>
+    </div>
+
+    <div class="home__action">
+      <a class="explore-button" href="destination.html" aria-label="Explore destinations">Explore</a>
+    </div>
+  </main>
+</body>
+
 </html>

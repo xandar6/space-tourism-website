@@ -33,7 +33,7 @@
   --sp-1600: 8rem; // 128px
 
   /* Font sizes */
-  --fs-1100: clamp(5rem, 7rem + 3vw, 9rem); // 80px - 144px
+  --fs-1100: clamp(5rem, 7rem + 2vw, 9rem); // 80px - 144px
   --fs-1000: clamp(3.5rem, 4.5rem + 3vw, 6.25rem); // 56px - 100px
   --fs-900: 6rem; // 96px
   --fs-800: 3.5rem; // 56px
@@ -51,13 +51,26 @@
   --line-height-body: 1.8;
 
   /* Layout */
-  --container-max: 69.375rem; // 1110px
+  --container-max: 82rem; // 1312px
+  --container-gap: var(--sp-400);
+  --container-gutter: var(--sp-400);
+  --page-grid-columns: minmax(var(--container-gutter), 1fr)
+    repeat(2, minmax(0, calc((var(--container-max) - var(--container-gap)) / 2)))
+    minmax(var(--container-gutter), 1fr);
   --container-padding: clamp(1.5rem, 5vw, 2.5rem);
   --section-spacing: clamp(4rem, 8vw, 6rem);
 
   /* Component sizing */
   --size-interactive-target: 2.75rem; // 44px
   --size-navigation-indicator: 0.1875rem; // 3px
+
+  /* Home composition */
+  --home-copy-max: 34rem;
+  --home-title-size-small: 5rem;
+  --home-title-size-large: 9rem;
+  --home-title-line-height: 1.1;
+  --home-explore-size-small: 9rem;
+  --home-explore-size-large: 17rem;
 
   /* Motion */
   --duration-fast: 200ms;

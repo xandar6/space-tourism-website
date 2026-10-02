@@ -1,3 +1,55 @@
+## Project Context and Decisions
+
+This repository contains a portfolio-focused solution to the Frontend Mentor Space Tourism multi-page website challenge. Preserve the established architecture and design-system conventions when extending it.
+
+### Production Pages
+
+- Use four production HTML documents at the repository root: `index.html`, `destination.html`, `crew.html`, and `technology.html`.
+- Treat Destination, Crew, and Technology selections as interactive states within their respective page, not as separate production HTML documents.
+- Use `data.json` as the canonical content source for destinations, crew members, and technologies.
+- Treat `starter-html/` as supplied content reference material only. Do not build the production site inside that directory or copy its unstructured markup without reviewing it semantically.
+- Treat desktop, tablet, and mobile designs as responsive states of the same pages, never as separate pages.
+
+### Shared Header
+
+- Keep complete, semantic primary-header markup in every production HTML document so navigation does not depend on JavaScript.
+- Keep duplicated header markup synchronized across all four pages.
+- Share header presentation and behavior through `scss/components/_primary-header.scss`, `scss/components/_navigation.scss`, and `js/components/primary-header.js`.
+- Apply `aria-current="page"` only to the navigation link for the current document.
+- Do not introduce client-side HTML fetching, a Web Component, or a template system solely to deduplicate four headers unless the user explicitly chooses that architectural change.
+
+### Source Boundaries
+
+- `scss/` and `js/` contain production source code shared by the website and documented components.
+- `scss/main.scss` is the production Sass entry point; `js/main.js` is the production JavaScript entry point.
+- `design-system/` contains only documentation-specific pages, styles, scripts, and isolated previews.
+- Production components must remain independent of the documentation layer. Documentation may consume production components, but production pages must not depend on files inside `design-system/`.
+- `css/style.css` and `design-system/css/documentation.css` are generated outputs. Edit their Sass sources instead of editing compiled CSS directly.
+- Consult `README.md` when changing project architecture, scripts, or directory responsibilities; do not require it for unrelated small edits.
+
+### CSS and Component Conventions
+
+- Reuse existing design tokens, utilities, layout primitives, and components before introducing new abstractions.
+- Store runtime design values in CSS custom properties in `scss/base/_variables.scss`.
+- Store compile-time breakpoints in `scss/abstracts/_breakpoints.scss` and reference those Sass variables instead of repeating literal media-query widths.
+- Keep reusable component rules in `scss/components/`; keep page composition and larger structural layout separate from component internals.
+- Use utility classes for genuinely reusable single-purpose declarations. Use component classes for component-specific appearance or behavior.
+- Preserve the established component naming style and avoid page-specific selectors that unintentionally affect design-system examples.
+- Maintain visible hover and keyboard-focus states, reduced-motion support, semantic HTML, and appropriate ARIA behavior.
+
+### JavaScript Conventions
+
+- Use native ES modules and initialize production behavior through `js/main.js`.
+- Put reusable component behavior in `js/components/`.
+- Keep JavaScript as progressive enhancement where practical; primary navigation and meaningful page structure must exist in HTML before scripts run.
+- When implementing tabs or pagination, keep visual state, accessible state, and displayed content synchronized.
+
+### Verification
+
+- Use `npm run sass` while developing and `npm run check` after changes that affect Sass or JavaScript.
+- Verify responsive behavior at the shared breakpoints and test interactive controls with both pointer and keyboard input.
+- When reviewing future work, compare it against these architecture decisions and the completed design system, correcting inconsistencies rather than creating parallel patterns.
+
 ## 1. Role Definition
 
 You are an **experienced colleague** helping someone who has solid fundamentals and is pushing into more complex work. The user working on this challenge is at the **Intermediate** level - they're ready to tackle more challenging projects and refine their craft.

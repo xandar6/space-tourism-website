@@ -5,6 +5,7 @@
   grid-template-columns: auto minmax(0, 1fr) auto;
   align-items: center;
   inline-size: 100%;
+  margin-block: var(--sp-400);
 }
 
 .primary-header::after {
@@ -13,7 +14,6 @@
   grid-column: 2;
   grid-row: 1;
   block-size: 1px;
-  margin-inline-start: var(--sp-500);
   margin-inline-end: calc(var(--sp-200) * -1);
   background-color: hsl(var(--clr-white) / 0.25);
 }
@@ -21,6 +21,7 @@
 .primary-header__logo {
   grid-column: 1;
   grid-row: 1;
+  margin-inline: clamp(var(--sp-150), 4vw, var(--sp-500));
 }
 
 .primary-header__menu-toggle {
@@ -51,10 +52,40 @@
   }
 }
 
-@media (width <= breakpoints.$tablet) {
+@media (width >= breakpoints.$desktop) {
+  .primary-header {
+    grid-template-columns: var(--page-grid-columns);
+    column-gap: var(--container-gap);
+  }
+
+  .primary-header__logo {
+    grid-column: 2;
+    justify-self: start;
+    inline-size: var(--sp-600);
+    margin-inline: 0;
+  }
+
+  .primary-header::after {
+    margin-inline-start: calc(var(--sp-600) + var(--sp-400));
+    margin-inline-end: calc((var(--container-gap) + var(--sp-200)) * -1);
+  }
+
+  .primary-navigation {
+    grid-column: 3 / -1;
+    padding-inline: clamp(var(--sp-200), 2vw, var(--sp-400));
+  }
+
+  .primary-navigation .nav-list {
+    max-inline-size: calc((var(--container-max) - var(--container-gap)) / 2 - var(--sp-400));
+    gap: clamp(var(--sp-200), 1vw, var(--sp-400));
+    justify-content: space-between;
+  }
+}
+
+@media (width < breakpoints.$desktop) {
   .primary-header {
     grid-template-columns: auto minmax(0, 1fr);
-    gap: var(--sp-500);
+    margin-block: 0;
   }
 
   .primary-header::after {
@@ -70,17 +101,19 @@
   }
 }
 
-@media (width <= breakpoints.$mobile) {
+@media (width <= breakpoints.$navigation) {
   body.navigation-open {
     overflow: hidden;
   }
 
   .primary-header {
-    padding: var(--sp-100) var(--sp-150);
+    padding-inline: var(--sp-300);
+    margin-block: var(--sp-300);
   }
 
   .primary-header__logo {
     inline-size: var(--sp-500);
+    margin-inline: 0;
   }
 
   .js .primary-header__menu-toggle {
@@ -97,6 +130,7 @@
     inset: 0 0 0 30%;
     display: block;
     padding-block: var(--sp-1200) var(--sp-400);
+    overflow-y: auto;
     visibility: hidden;
     transform: translateX(100%);
     transition:

@@ -1,3 +1,16 @@
+@use "../abstracts/breakpoints";
+
+.grid-container {
+  display: grid;
+  padding-inline: var(--sp-200);
+
+  @media (width >= breakpoints.$desktop) {
+    grid-template-columns: var(--page-grid-columns);
+    column-gap: var(--container-gap);
+    padding-inline: 0;
+  }
+}
+
 .container {
   width: min(100% - (var(--container-padding) * 2), var(--container-max));
   margin-inline: auto;

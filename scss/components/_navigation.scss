@@ -1,3 +1,18 @@
+.skip-link {
+  position: fixed;
+  z-index: 3;
+  inset-block-start: var(--sp-200);
+  inset-inline-start: var(--sp-200);
+  padding: var(--sp-100) var(--sp-200);
+  background-color: var(--color-text);
+  color: var(--color-background);
+  transform: translateY(calc(-100% - var(--sp-400)));
+}
+
+.skip-link:focus {
+  transform: translateY(0);
+}
+
 .nav-list {
   display: flex;
   gap: var(--navigation-gap, var(--sp-400));

@@ -10,7 +10,8 @@
   aspect-ratio: 1;
   border-radius: 50%;
   font-family: var(--ff-bellefair);
-  font-size: var(--fs-700);
+  // Match the button's growth from 9rem to 17rem.
+  font-size: clamp(var(--fs-300), 0.140625rem + 2.734375vw, var(--fs-700));
   text-transform: uppercase;
   background-color: hsl(var(--clr-white));
   color: hsl(var(--clr-blue-900));

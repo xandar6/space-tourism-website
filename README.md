@@ -1,12 +1,19 @@
 # Space Tourism Website
 
-A responsive multi-page website built from the Frontend Mentor Space Tourism challenge. The design system is complete; implementation of the website pages is the next project phase.
+A responsive multi-page website built from the Frontend Mentor Space Tourism challenge. The design system and responsive home page are complete. Destination, Crew, and Technology are the next implementation phase.
+
+## Current progress
+
+- Completed: shared design system, responsive header, and home page.
+- Planned: `destination.html`, `crew.html`, and `technology.html`, with interactive selections powered by `data.json`.
+- Known unfinished work: navigation and the Explore link already target these planned pages, which do not exist yet. This is a home-page development milestone, not a finished multi-page release.
 
 ## Project structure
 
 ```text
 assets/                 Shared imagery and icons
 css/                    Compiled production CSS
+design-screenshots/     Supplied responsive design references
 design-system/          Documentation-only pages and assets
   css/                  Compiled documentation CSS
   js/                   Documentation example generation
@@ -20,10 +27,12 @@ scss/
   base/                 Reset, global styles, and design tokens
   components/           Reusable component styles
   layout/               Layout primitives
+  pages/                Page-specific composition and styles
   utilities/            Single-purpose utilities and text presets
   main.scss             Production Sass entry point
 index.html              Website home page
 data.json               Destination, crew, and technology content
+starter-html/           Supplied content references, not production pages
 ```
 
 Shared components remain outside `design-system/` because the catalogue documents the same production CSS and JavaScript used by the website. Only documentation-specific code is contained within `design-system/`.
@@ -48,6 +57,7 @@ npm run check
 ## Architecture
 
 - CSS custom properties hold runtime design tokens and component configuration.
+- The shared four-column `.grid-container` lives in `scss/layout/`; `--page-grid-columns` coordinates its tracks with the desktop header. Pages own their content placement and vertical spacing. The header navigation surface can extend through the right gutter while its links stay within the content width.
 - Sass variables hold compile-time values, including shared breakpoints.
 - Reusable components are independent of the documentation layer.
 - Responsive component previews use isolated iframe viewports.
